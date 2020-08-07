@@ -1,0 +1,53 @@
+/* .armory_items_container_left > ul > li:nth-child(2) .armory_item_hover {
+	opacity: 1;
+	top: 0;
+	visibility: visible;
+} */
+.armory_item_hover {
+	position: absolute;
+	min-width: 300px;
+	width: calc( (100% - 20px) / 3 );
+	height: auto;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgb(15, 9, 27);
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	overflow:hidden;
+	visibility: hidden;
+	border-radius: 3px;
+	z-index: 1;
+	border: 1px solid var(--light);
+}
+.armory_item:hover .armory_item_hover {
+	opacity: 1;
+	top: 0;
+	visibility: visible;
+	z-index: 2;
+}
+.armory_item_hover{
+	padding: 10px 20px 20px 20px;
+}
+.armory_item_hover > div > * {
+	padding-top: 10px;
+}
+/* hover title */
+.armory_item_hover_info_title > p{
+	color: var(--light);
+	font-size: 0.9em;
+}
+@media screen and (max-width: 559px) {
+	.armory_item_hover {
+		min-width: 220px;
+	    width: calc( (100% - 20px) / 3 );
+	}
+	.armory_item_hover{
+		padding: 5px 10px 10px 10px;
+	}
+	.armory_item_hover > div > * {
+		padding-top: 5px;
+	}
+}

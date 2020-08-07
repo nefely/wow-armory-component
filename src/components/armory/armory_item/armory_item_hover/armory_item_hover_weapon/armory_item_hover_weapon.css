@@ -1,0 +1,9 @@
+.armory_item_hover_weapon {
+	color: var(--white);
+	font-size: 0.9em;
+}
+.armory_item_hover_weapon > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

@@ -1,0 +1,7 @@
+.armory_item_hover_set_part {
+	color: var(--gray);
+	padding-left: 7px;
+}
+.armory_item_hover_set_part.equiped_part{
+	color: #bfbf74;
+}

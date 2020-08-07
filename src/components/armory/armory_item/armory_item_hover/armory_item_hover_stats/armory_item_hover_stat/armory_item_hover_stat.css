@@ -1,0 +1,5 @@
+.armory_item_hover_stat {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

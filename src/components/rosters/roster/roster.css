@@ -1,0 +1,26 @@
+.rosters_list > li {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 40px;
+}
+.rosters_list > li button {
+	width: inherit;
+	height: inherit;
+	text-align: left;
+	padding: 0 10px;
+	border-radius: 0;
+	color: var(--white);
+	background: var(--chrome);
+	border-top: 1px solid var(--dark);
+}
+.rosters_list > li.active_roster button {
+	background: var(--default-color);
+}
+.rosters_list > li button:hover {
+	background: var(--gray);
+}
+.rosters_list > li:first-child > button {
+	border-top: 0;
+}

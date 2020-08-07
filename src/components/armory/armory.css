@@ -1,0 +1,113 @@
+#armory {
+    width: 100%;
+    min-height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center calc(50% - 100px);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.armory_items_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.armory_items_container_left,
+.armory_items_container_right,
+.armory_items_container_center {
+    width: calc( (100% - 20px) / 3 );
+}
+.armory_items_container_left ul,
+.armory_items_container_right ul {
+}
+.armory_items_container_left ul > li,
+.armory_items_container_right ul > li {
+    /* background: var(--light); */
+    height: 60px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.armory_items_container_weapon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.armory_items_container_weapon {
+    margin-top: 60px;
+}
+.armory_items_container_weapon ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.armory_items_container_weapon ul > li {
+    height: 60px;
+    width: calc( (100% - 20px) / 3 );
+    /* background: var(--light); */
+}
+.armory_items_container_weapon ul > li:first-child {
+    margin-right: 10px;
+}
+
+/* @media screen and (max-width: 1440px) {
+    .armory_items_container_center {
+        display: none;
+    }
+    .armory_items_container_left,
+    .armory_items_container_right {
+        width: calc(50% - 5px);
+    }  
+    .armory_items_container_weapon ul {
+        width: 100%;
+    }
+    .armory_items_container_weapon ul > li {
+        width: calc(50% - 5px);
+    }
+}
+@media screen and (max-width: 991px) {
+    .armory_items_container_left,
+    .armory_items_container_right {
+        width: 100%;
+    }  
+    .armory_items_container_weapon ul {
+        width: 100%;
+    }
+    .armory_items_container_weapon ul > li {
+        width: 100%;
+    }
+    .armory_items_container_weapon ul > li:first-child {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+} */
+@media screen and (max-width: 1199px) {
+    #armory {
+        background-position: center 50%;
+    }
+    .armory_items_container_left ul > li,
+    .armory_items_container_right ul > li {
+        height: 40px;
+    }
+    .armory_items_container_weapon ul > li {
+        height: 40px;
+    }
+    .armory_items_container_left,
+    .armory_items_container_right{
+        width: 40px;
+    }
+    .armory_items_container_center {
+        width: calc(100% - 80px);
+        height: 100%;
+        min-height: 400px;
+    }
+    .armory_items_container_weapon{
+        margin-top: 20px;
+    }
+}

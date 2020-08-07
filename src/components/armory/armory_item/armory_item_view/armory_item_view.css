@@ -1,0 +1,94 @@
+.armory_item_view {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+}
+.armory_item_view .armory_item_view_info_addition {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.armory_item_view .armory_item_view_info_addition > * > * {
+	margin-right: 5px;
+}
+.armory_item_view_info_addition_enchantment,
+.armory_item_view_info_addition_sockets {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.armory_item_view_info_addition_item_level {
+	color: var(--light)
+}
+
+/* float left */
+.armory_items_container_left ul > li .armory_item_view .armory_item_view_info_addition > * > * ,
+.armory_items_container_weapon ul > li:last-child .armory_item_view .armory_item_view_info_addition > * > * {
+	margin-right: 5px;
+	margin-left: 0;
+}
+.armory_items_container_weapon ul > li:last-child .armory_item_view > .armory_item_view_img,
+.armory_items_container_left ul > li .armory_item_view > .armory_item_view_img {
+	margin-right: 20px;
+	margin-left: 0;
+}
+.armory_items_container_left ul > li .armory_item_view ,
+.armory_items_container_weapon ul > li:last-child .armory_item_view {
+	justify-content: flex-start;
+}
+.armory_items_container_left ul > li .armory_item_view .armory_item_view_info_addition,
+.armory_items_container_weapon ul > li:last-child .armory_item_view .armory_item_view_info_addition {
+	justify-content: flex-start;
+	flex-direction: row;
+}
+.armory_items_container_left ul > li .armory_item_view > .armory_item_view_img,
+.armory_items_container_weapon ul > li:last-child .armory_item_view > .armory_item_view_img {
+	order: 1;
+}
+.armory_items_container_left ul > li .armory_item_view > .armory_item_view_info,
+.armory_items_container_weapon ul > li:last-child .armory_item_view > .armory_item_view_info {
+	order: 2;
+}
+.armory_items_container_left ul > li .armory_item_view .armory_item_view_info_title,
+.armory_items_container_weapon ul > li:last-child .armory_item_view .armory_item_view_info_title {
+	text-align: left;
+}
+
+/* float right */
+.armory_items_container_right ul > li .armory_item_view .armory_item_view_info_addition > * > *,
+.armory_items_container_weapon ul > li:first-child .armory_item_view .armory_item_view_info_addition > * > * {
+	margin-right: 0;
+	margin-left: 5px;
+}
+.armory_items_container_right ul > li .armory_item_view > .armory_item_view_img,
+.armory_items_container_weapon ul > li:first-child .armory_item_view > .armory_item_view_img {
+	margin-right: 0;
+	margin-left: 20px;
+}
+.armory_items_container_right ul > li .armory_item_view,
+.armory_items_container_weapon ul > li:first-child .armory_item_view {
+	justify-content: flex-end;
+}
+.armory_items_container_right ul > li .armory_item_view .armory_item_view_info_addition,
+.armory_items_container_weapon ul > li:first-child .armory_item_view .armory_item_view_info_addition {
+	justify-content: flex-start;
+	flex-direction: row-reverse;
+}
+.armory_items_container_right ul > li .armory_item_view > .armory_item_view_img,
+.armory_items_container_weapon ul > li:first-child .armory_item_view > .armory_item_view_img {
+	order: 2;
+}
+.armory_items_container_right ul > li .armory_item_view > .armory_item_view_info,
+.armory_items_container_weapon ul > li:first-child .armory_item_view > .armory_item_view_info {
+	order: 1;
+}
+.armory_items_container_right ul > li .armory_item_view .armory_item_view_info_title,
+.armory_items_container_weapon ul > li:first-child .armory_item_view .armory_item_view_info_title {
+	text-align: right;
+}
+@media screen and (max-width: 1199px) {
+	.armory_item_view_info{
+		display: none;
+	}
+}

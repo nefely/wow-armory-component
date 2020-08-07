@@ -1,0 +1,6 @@
+.armory_items_container {
+	position: relative;
+}
+.armory_item {
+	cursor: pointer;
+}

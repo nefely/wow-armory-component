@@ -1,0 +1,31 @@
+#rosters {
+	width: 200px;
+	height: calc(var(--vh, 1vh) * 100);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	overflow-y: hidden;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transform: translateX(100%);
+}
+.rosters_container {
+	width: 100%;
+	height: calc(var(--vh, 1vh) * 100);
+	overflow-y: hidden;
+}
+.rosters_title {
+	background: var(--dark);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	color: var(--white);
+	padding: 0 10px;
+}
+.rosters_list {
+	height: calc(100% - 40px);
+	overflow-y: scroll;
+}

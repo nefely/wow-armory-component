@@ -1,0 +1,6 @@
+.armory_item_hover_set_effect {
+	color: var(--gray);
+}
+.armory_item_hover_set_effect.active_effect {
+	 color: #deb603;
+}

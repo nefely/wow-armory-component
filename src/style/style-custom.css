@@ -1,0 +1,28 @@
+/* styles write here */
+main {position:relative}
+section{padding:20px 0}
+body {background: rgb(15, 9, 27)}
+.app {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	height: calc(var(--vh, 1vh) * 100);
+	overflow:hidden;
+}
+.workspace_container {
+	height: calc(var(--vh, 1vh) * 100);
+	width: 100%;
+	overflow-x: auto;
+	background: rgb(15, 9, 27);
+}
+/* default media */
+/* xl */
+@media screen and (min-width: 1200px) {}
+/* lg */
+@media screen and (min-width: 992px) and (max-width: 1199px) {}
+/* md */
+@media screen and (min-width: 768px) and (max-width: 991px) {}
+/* sm */
+@media screen and (min-width: 560px) and (max-width: 767px) {}
+/* xs */
+@media screen and (max-width: 559px) {}

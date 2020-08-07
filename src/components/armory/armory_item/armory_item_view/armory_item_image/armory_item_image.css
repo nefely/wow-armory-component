@@ -1,0 +1,281 @@
+.armory_items_container_left > ul > li:nth-child(1) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 0;
+	background-size: 60px auto;
+}
+.armory_items_container_left > ul > li:nth-child(2) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -60px;
+	background-size: 60px auto;
+}
+.armory_items_container_left > ul > li:nth-child(3) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -120px;
+	background-size: 60px auto;
+}
+.armory_items_container_left > ul > li:nth-child(4) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/back.jpg");
+	background-position: 0 0;
+	background-size: 60px auto;
+}
+.armory_items_container_left > ul > li:nth-child(5) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -180px;
+	background-size: 60px auto;
+}
+.armory_items_container_left > ul > li:nth-child(6) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -300px;
+	background-size: 60px auto;
+}
+.armory_items_container_left > ul > li:nth-child(7) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -240px;
+	background-size: 60px auto;
+}
+.armory_items_container_left > ul > li:nth-child(8) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -360px;
+	background-size: 60px auto;
+}
+.armory_items_container_right > ul > li:nth-child(1) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -420px;
+	background-size: 60px auto;
+}
+.armory_items_container_right > ul > li:nth-child(2) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -480px;
+	background-size: 60px auto;
+}
+.armory_items_container_right > ul > li:nth-child(3) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -540px;
+	background-size: 60px auto;
+}
+.armory_items_container_right > ul > li:nth-child(4) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -540px;
+	background-size: 60px auto;
+}
+.armory_items_container_right > ul > li:nth-child(5) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -660px;
+	background-size: 60px auto;
+}
+.armory_items_container_right > ul > li:nth-child(6) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -660px;
+	background-size: 60px auto;
+}
+.armory_items_container_right > ul > li:nth-child(7) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -960px;
+	background-size: 60px auto;
+}
+.armory_items_container_right > ul > li:nth-child(8) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -960px;
+	background-size: 60px auto;
+}
+.armory_items_container_weapon > ul > li:nth-child(1) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -780px;
+	background-size: 60px auto;
+}
+.armory_items_container_weapon > ul > li:nth-child(2) > .armory_item > .armory_item_view > .armory_item_view_img{
+	background: url("../../../../../img/filler_slot_img.png");
+	background-position: 0 -840px;
+	background-size: 60px auto;
+}
+.armory_item_view_img {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	min-width: 60px;
+	min-height: 60px;
+	margin-right: 20px;
+	border: 1px solid #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.armory_item_view.corupted .armory_item_view_img:after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: -1px;
+	bottom: -1px;
+	background: url('../../../../../img/corrupted_item_border.png');
+	background-size: 100% 100%;
+}
+.armory_item_view_img > img {
+	width: 56px;
+	height: 56px;
+	min-width: 56px;
+	min-height: 56px;
+	object-fit: cover;
+	object-position: center;
+	position: relative;
+}
+.armory_item_view_img.azerite_item:after {
+	content: "";
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	border-image-source: url(../../../../../img/azerite.png);
+    border-image-repeat: initial;
+    border-image-slice: 48 fill;
+    border-image-width: 48px;
+	border-image-outset: 2px 9px 3px 10px;
+}
+.ARTIFACT .armory_item_view_img,
+.AZERITE .armory_item_view_img {
+    border: 1px solid #e5cc80;
+}
+.HEIRLOOM .armory_item_view_img {
+    border: 1px solid #0cf;
+}
+.LEGENDARY .armory_item_view_img {
+    border: 1px solid #ff8000;
+}
+.EPIC .armory_item_view_img {
+    border: 1px solid #c600ff;
+}
+.RARE .armory_item_view_img {
+    border: 1px solid #0081ff;
+}
+.UNCOMMON .armory_item_view_img {
+    border: 1px solid #1eff00;
+}
+.COMMON .armory_item_view_img {
+    border: 1px solid #fff;
+}
+.POOR .armory_item_view_img {
+    border: 1px solid #9d9d9d;
+}
+
+@media screen and (max-width: 1199px) {
+	.armory_item_view_img {
+		width: 40px;
+		height: 40px;
+		min-width: 40px;
+		min-height: 40px;
+	}
+	.armory_item_view.corupted .armory_item_view_img:after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		left: -1px;
+		bottom: -1px;
+		background: url('../../../../../img/corrupted_item_border.png');
+		background-size: 100% 100%;
+	}
+	.armory_item_view_img > img {
+		width: 38px;
+		height: 38px;
+		min-width: 38px;
+		min-height: 38px;
+	}
+	.armory_item_view_img.azerite_item:after {
+		width: 38px;
+		height: 38px;
+		border-image-source: url(../../../../../img/azerite.png);
+	    border-image-repeat: initial;
+	    border-image-slice: 38 fill;
+	    border-image-width: 38px;
+		border-image-outset: 1px 7px 1px 7px;
+	}
+	.armory_items_container_left > ul > li:nth-child(1) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 0;
+		background-size: 40px auto;
+	}
+	.armory_items_container_left > ul > li:nth-child(2) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -40px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_left > ul > li:nth-child(3) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -80px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_left > ul > li:nth-child(4) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/back.jpg");
+		background-position: 0 0;
+		background-size: 40px auto;
+	}
+	.armory_items_container_left > ul > li:nth-child(5) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -120px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_left > ul > li:nth-child(6) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -200px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_left > ul > li:nth-child(7) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -160px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_left > ul > li:nth-child(8) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -240px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_right > ul > li:nth-child(1) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -280px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_right > ul > li:nth-child(2) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -320px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_right > ul > li:nth-child(3) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -360px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_right > ul > li:nth-child(4) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -360px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_right > ul > li:nth-child(5) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -440px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_right > ul > li:nth-child(6) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -440px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_right > ul > li:nth-child(7) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -560px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_right > ul > li:nth-child(8) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -560px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_weapon > ul > li:nth-child(1) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -520px;
+		background-size: 40px auto;
+	}
+	.armory_items_container_weapon > ul > li:nth-child(2) > .armory_item > .armory_item_view > .armory_item_view_img{
+		background: url("../../../../../img/filler_slot_img.png");
+		background-position: 0 -560px;
+		background-size: 40px auto;
+	}
+}

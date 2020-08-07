@@ -1,0 +1,8 @@
+.armory_item_hover_azerite_power {
+	color: var(--white);
+	font-size: 0.9em;
+}
+.armory_item_hover_azerite_power > div:nth-child(2) {
+	color: #00ff00;
+	padding-left: 7px;
+}
