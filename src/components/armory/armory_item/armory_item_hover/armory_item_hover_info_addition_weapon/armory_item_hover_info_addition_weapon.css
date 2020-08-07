@@ -1,9 +1,0 @@
-.armory_item_hover_info_addition_weapon {
-	color: var(--white);
-	font-size: 0.9em;
-}
-.armory_item_hover_info_addition_weapon > div {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}

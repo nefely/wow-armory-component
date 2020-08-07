@@ -29,13 +29,13 @@ export default class Armory_Item_Socket extends Component {
     	try {
     		return (
 	    		<div className="armory_item_view_info_addition_socket">
-					<img src={this.state.img} alt=""/>
+					<img src={this.state.img} alt="" />
 					<p>{this.props.data.display_string}</p>
 	    		</div>
 	    	)
     	} catch (error) {
     		return (
-	    		<div className="armory_item_view_info_addition_socket xs-hide"/>
+	    		<div className="armory_item_view_info_addition_socket xs-hide" />
 	    	)
     	}
     }

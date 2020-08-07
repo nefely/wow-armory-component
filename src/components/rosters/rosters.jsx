@@ -16,14 +16,16 @@ export default class Rosters extends Component {
 	}
 
 	UNSAFE_componentWillMount() {
-	    axios.get("https://"+store.userData.region+".api.blizzard.com/data/wow/guild/"+store.userData.realmSlug+"/"+store.userData.nameSlug+"/roster?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
-		    .then(result => {
-				this.setState({ 
-					data: result ,
-					isLoaded: true,
-				});
-		    }
-	    );
+		try {
+			axios.get("https://"+store.userData.region+".api.blizzard.com/data/wow/guild/"+store.userData.realmSlug+"/"+store.userData.nameSlug+"/roster?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
+			    .then(result => {
+					this.setState({ 
+						data: result ,
+						isLoaded: true,
+					});
+			    }
+		    );
+		} catch (error) {}
   	}
 
     render() {

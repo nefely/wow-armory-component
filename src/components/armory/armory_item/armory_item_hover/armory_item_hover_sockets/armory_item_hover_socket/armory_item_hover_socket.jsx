@@ -38,7 +38,7 @@ export default class Armory_Item_Hover_Socket extends Component {
     	} catch (error) {
     		return (
 	    		<div className="armory_item_hover_socket">
-	    			<div></div>
+	    			<div />
 	    		</div>
 	    	)
     	}

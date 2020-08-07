@@ -12,13 +12,13 @@ export default class Armory_Item_Sockets extends Component {
 			return (
 		    	<div className="armory_item_view_info_addition_sockets">
 			    	{this.props.data.sockets.map((data, i) => (
-						<Armory_Item_Socket data={data} key={i}/>
+						<Armory_Item_Socket data={data} key={i} />
 					))}
 				</div>
 			)
 		} catch (error) {
 			return (
-    			<div className="armory_item_view_info_addition_sockets xs-hide"/>
+    			<div className="armory_item_view_info_addition_sockets xs-hide" />
     		)
 		}
     }

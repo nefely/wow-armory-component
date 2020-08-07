@@ -42,7 +42,7 @@ export default class Armory_Item extends Component {
 			return (
 	    		<div className="armory_item">
 					<div className="armory_item_view">
-						<div className="armory_item_view_img"></div>
+						<div className="armory_item_view_img" />
 					</div>
 				</div>
 			)

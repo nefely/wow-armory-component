@@ -1,7 +1,0 @@
-.armory_item_hover_info_addition .armory_item_hover_info_addition_slot {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: var(--white);
-	font-size: 0.9em;
-}

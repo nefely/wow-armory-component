@@ -23,7 +23,6 @@ export default class Armory_Item_Image extends Component {
 			    },
 		    )
 		} catch (error) {}
-	    
 	    try {
 	    	if (this.props.isAzerite !== undefined && this.props.isAzerite !== null) {
 				if ( this.props.isAzerite.selected_powers !== undefined && this.props.isAzerite.selected_powers !== null) {
