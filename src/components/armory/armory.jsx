@@ -119,7 +119,7 @@ export default class Armory extends Component {
 	        )
     	} catch (error) {
     		return (
-    			<div id="armory" className="xs-hied" />
+    			<div id="armory" className="xs-hide" />
     		)
     	}
     }

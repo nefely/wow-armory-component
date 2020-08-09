@@ -13,7 +13,7 @@ export default class Armory_Title extends Component {
 	}
 
 	UNSAFE_componentWillMount() {
-			try {
+		try {
 			axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"/appearance?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
 			   .then(result => {
 					this.setState({ 
