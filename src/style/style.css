@@ -591,9 +591,11 @@ h6 {
     }
     .xs-hide {
         display: none;
+        visibility: hidden;
     }
     .xs-visible {
         display: block;
+        visibility: visible;
     }
 }
 /* sm */
@@ -800,9 +802,11 @@ h6 {
     }
     .sm-hide {
         display: none;
+        visibility: hidden;
     }
     .sm-visible {
         display: block;
+        visibility: visible;
     }
 }
 /* md */
@@ -1009,9 +1013,11 @@ h6 {
     }
     .md-hide {
         display: none;
+        visibility: hidden;
     }
     .md-visible {
         display: block;
+        visibility: visible;
     }
 }
 /* lg */
@@ -1218,9 +1224,11 @@ h6 {
     }
     .lg-hide {
         display: none;
+        visibility: hidden;
     }
     .lg-visible {
         display: block;
+        visibility: visible;
     }
 }
 /* xl */
@@ -1427,9 +1435,11 @@ h6 {
     }
     .xl-hide {
         display: none;
+        visibility: hidden;
     }
     .xl-visible {
         display: block;
+        visibility: visible;
     }
 }
 /* xl */

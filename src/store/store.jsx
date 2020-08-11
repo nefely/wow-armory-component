@@ -8,7 +8,7 @@ var store = {
 		"characterID": "193910968",
 		"nameSpace": "profile-eu",
 		"locale": "en_GB",
-		"accessToken": "USbNd3ucJNubDsNHsT5KTEgchB4LoZTmoB",
+		"accessToken": "USVSPO3xkbrxordurRK1avCrrQCSTxybHn",
 	},
 	/*userEquipedItem: {},
 	userCharacter: {},*/

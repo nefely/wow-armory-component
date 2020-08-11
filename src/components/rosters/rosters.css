@@ -1,31 +1,97 @@
 #rosters {
-	width: 200px;
-	height: calc(var(--vh, 1vh) * 100);
+	width: 210px;
+	height: calc( (var(--vh, 1vh) * 100) - 20px );
 	display: flex;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	align-items: center;
-	overflow-y: hidden;
 	position: fixed;
 	right: 0;
-	top: 0;
-	transform: translateX(100%);
+	top: 10px;
+	transform: translateX(210px);
+	z-index: 1000;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+#rosters.isVisible {
+	transform: translateX(0px);
 }
 .rosters_container {
 	width: 100%;
 	height: calc(var(--vh, 1vh) * 100);
 	overflow-y: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.rosters_top_container {
+	width: 100%;
 }
 .rosters_title {
-	background: var(--dark);
-	width: 100%;
+	color: var(--white);
+	background: rgb(149, 109, 209);
+	width: 200px;
+	border: 1px solid rgb(149, 109, 209);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 40px;
+	border-radius: 3px;
+	margin: 10px 0 0 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+#rosters.isVisible .rosters_title {
+	opacity: 1;
+	visibility: visible;
+}
+.rosters_hover_button {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: -50px;
+	background: rgb(149, 109, 209);
 	color: var(--white);
-	padding: 0 10px;
+	border: 1px solid rgb(149, 109, 209);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+	margin: 10px 0 0 0;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+#rosters.isVisible .rosters_hover_button {
+	background: var(--danger-color);
+	color: var(--white);
+	border: 1px solid var(--danger-color);
+}
+.rosters_hover_button button {
+	width: 40px;
+	height: 40px;
+}
+.rosters_hover_button i {
+	color: var(--white);
 }
 .rosters_list {
-	height: calc(100% - 40px);
+	border: 1px solid var(--light);
+	height: calc(100% - 70px);
+	width: 200px;
 	overflow-y: scroll;
+	margin: 10px 10px 0 10px; 
+	border-radius: 3px;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+#rosters.isVisible .rosters_list {
+	opacity: 1;
+	visibility: visible;
+
 }

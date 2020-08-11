@@ -7,9 +7,7 @@ import "./armory_title.css";
 export default class Armory_Title extends Component {
 	constructor(props) {
 	    super(props);
-		this.state = {
-	    	isLoaded: false,
-	  	}
+		this.state = {}
 	}
 
 	UNSAFE_componentWillMount() {
@@ -17,8 +15,7 @@ export default class Armory_Title extends Component {
 			axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"/appearance?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
 			   .then(result => {
 					this.setState({ 
-						characterInfo: result.data ,
-						isLoaded: true,
+						characterInfo: result.data
 					});
 			    }
 		    );

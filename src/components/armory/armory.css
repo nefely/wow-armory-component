@@ -21,6 +21,10 @@
 .armory_items_container_center {
     width: calc( (100% - 20px) / 3 );
 }
+.armory_items_container_center {
+    height: 100%;
+    min-height: 560px;
+}
 .armory_items_container_left ul,
 .armory_items_container_right ul {
 }

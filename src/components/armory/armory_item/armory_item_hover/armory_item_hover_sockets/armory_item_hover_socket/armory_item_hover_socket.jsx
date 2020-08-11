@@ -7,9 +7,7 @@ import "./armory_item_hover_socket.css";
 export default class Armory_Item_Hover_Socket extends Component {
 	constructor(props) {
 	    super(props);
-		this.state = {
-			isLoaded: false,
-		}
+		this.state = {}
 	}
 
 	UNSAFE_componentWillMount() {
@@ -18,7 +16,6 @@ export default class Armory_Item_Hover_Socket extends Component {
 			   .then(result => {
 					this.setState({ 
 						img: result.data.assets[0].value,
-						isLoaded: true,
 					});
 			    }
 		    )

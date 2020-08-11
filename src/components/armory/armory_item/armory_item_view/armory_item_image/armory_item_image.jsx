@@ -7,9 +7,7 @@ import "./armory_item_image.css";
 export default class Armory_Item_Image extends Component {
 	constructor(props) {
 	    super(props);
-		this.state = {
-			isLoaded: false,
-		}
+		this.state = {}
 	}
 
 	UNSAFE_componentWillMount() {
@@ -17,8 +15,7 @@ export default class Armory_Item_Image extends Component {
 			axios.get("https://us.api.blizzard.com/data/wow/media/item/"+this.props.data+"?namespace=static-us&locale=en_US&access_token="+store.userData.accessToken+"")
 			   .then(result => {
 					this.setState({ 
-						img: result.data.assets[0].value,
-						isLoaded: true,
+						img: result.data.assets[0].value
 					});
 			    },
 		    )

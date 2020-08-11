@@ -1,44 +1,40 @@
-.armory_item_hover {
+.corruptions_hover {
 	position: absolute;
 	min-width: 300px;
 	width: calc( (100% - 20px) / 3 );
 	height: auto;
 	top: 10%;
 	left: 50%;
-	transform: translateX(-50%);
 	background: rgb(15, 9, 27);
 	-webkit-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+	transform: translateX(-50%);
 	overflow:hidden;
 	opacity: 0;
 	visibility: hidden;
 	border-radius: 3px;
 	z-index: 1;
 	border: 1px solid var(--light);
-	padding: 10px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
 }
-.armory_item:hover .armory_item_hover {
+.corruptions:hover .corruptions_hover {
 	opacity: 1;
 	top: 0;
 	visibility: visible;
 	z-index: 2;
 }
-.armory_item_hover > div > * {
-	padding-top: 10px;
-}
-/* hover title */
-.armory_item_hover_title > p{
-	color: var(--light);
-	font-size: 0.9em;
+.corruptions_hover_title {
+	color: rgb(149, 109, 209);
+	text-align: center;
 }
 @media screen and (max-width: 559px) {
-	.armory_item_hover {
+	.corruptions_hover {
 		min-width: 210px;
 	    width: calc( (100% - 20px) / 3 );
-	    padding: 5px 10px 10px 10px;
+	    padding: 10px 10px 10px 10px;
 	}
-	.armory_item_hover > div > * {
-		padding-top: 5px;
+	.corruptions_hover_title {
+		margin-bottom: 10px;
 	}
 }

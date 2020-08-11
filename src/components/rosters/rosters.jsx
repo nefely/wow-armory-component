@@ -10,8 +10,7 @@ export default class Rosters extends Component {
 	constructor(props) {
 	    super(props);
 		this.state = {
-	    	isLoaded: false,
-	    	activeRoster: store.userData.characterName,
+	    	isVisible: false,
 	  	}
 	}
 
@@ -21,7 +20,6 @@ export default class Rosters extends Component {
 			    .then(result => {
 					this.setState({ 
 						data: result ,
-						isLoaded: true,
 					});
 			    }
 		    );
@@ -29,16 +27,27 @@ export default class Rosters extends Component {
   	}
 
     render() {
+    	const toggleRosterList = () => {
+    		this.setState({
+    			isVisible: !this.state.isVisible,
+    		})
+    	}
+
     	try {
 	        return (
-				<div id="rosters">
+				<div id="rosters" className={ this.state.isVisible ? "isVisible" : ""}>
 					<div className="rosters_container">
-						<div className="rosters_title">
-							<h4>Rosters</h4>
+						<div className="xs-fbc rosters_top_container">
+							<div className="rosters_hover_button">
+								<button onClick={toggleRosterList}><i className={ this.state.isVisible ? "fas fa-times" : "fas fa-users"}></i></button>
+							</div>
+							<div className="rosters_title">
+								<h4>Rosters</h4>
+							</div>
 						</div>
 						<ul className="rosters_list">
 							{this.state.data.data.members.map((data, i) => 
-	                            <Roster key={i} data={data} isActiveRoster={this.state.activeRoster} />
+	                            <Roster key={i} data={data} />
 	                        )}
 						</ul>
 					</div>

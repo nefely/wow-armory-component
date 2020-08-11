@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import axios from 'axios';
-import store from './../../../../store/store.jsx';
 
 import "./armory_item_hover.css";
 
@@ -19,11 +17,11 @@ export default class Armory_Item_Hover extends Component {
     	try {
 			return (
 		    	<div className="armory_item_hover">
-					<div className="armory_item_hover_info_title">
+					<div className="armory_item_hover_title">
 						<h6>{this.props.data.name}</h6>
 						<p>Item Level: {this.props.data.level.value}</p>
 					</div>
-					<div className="armory_item_hover_info_addition">
+					<div className="armory_item_hover_addition">
 						<Armory_Item_Hover_Slot data={this.props.data} />
 						<Armory_Item_Hover_Weapon data={this.props.data} />
 						<Armory_Item_Hover_Stats data={this.props.data} />

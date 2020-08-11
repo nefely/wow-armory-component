@@ -1,0 +1,18 @@
+.corruptions_hover_item_corruption_type {
+	color: rgb(149, 109, 209);
+	font-size: 0.9em;
+}
+.corruptions_hover_item .corruptions_hover_item_corruption_type{
+	margin-top: 10px;
+}
+.corruptions_hover_container > .corruptions_hover_item:first-child .corruptions_hover_item_corruption_type {
+	margin-top: 20px;
+}
+@media screen and (max-width: 559px) {
+	.corruptions_hover_item .corruptions_hover_item_corruption_type{
+		margin-top: 5px;
+	}
+	.corruptions_hover_container > .corruptions_hover_item:first-child .corruptions_hover_item_corruption_type {
+		margin-top: 10px;
+	}
+}

@@ -7,8 +7,8 @@
 }
 .armory_item_hover_azerite_essence img {
 	 margin-right: 10px;
-	 width: 30px;
-	 height: 30px;
+	 width: 25px;
+	 height: 25px;
 	 border-radius: 50%;
 }
 .armory_item_hover_azerite_essences > .armory_item_hover_azerite_essence:not(:last-child) > * {

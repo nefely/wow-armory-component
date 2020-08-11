@@ -7,9 +7,7 @@ import "./armory_item_hover_azerite_essence.css";
 export default class Armory_Item_Hover_Azerite_Essence extends Component {
 	constructor(props) {
 	    super(props);
-		this.state = {
-			isLoaded: false,
-		}
+		this.state = {}
 	}
 
 	UNSAFE_componentWillMount() {
@@ -19,7 +17,6 @@ export default class Armory_Item_Hover_Azerite_Essence extends Component {
 				   .then(result => {
 						this.setState({ 
 							img: result.data.assets[0].value,
-							isLoaded: true,
 						});
 						var rank_lvl = "";
 						const rank = this.props.data.rank;
@@ -51,7 +48,6 @@ export default class Armory_Item_Hover_Azerite_Essence extends Component {
 				   .then(result => {
 						this.setState({ 
 							img: result.data.assets[0].value,
-							isLoaded: true,
 						});
 						var rank_lvl = "";
 						const rank = this.props.data.rank;

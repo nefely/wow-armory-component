@@ -6,13 +6,12 @@ import "./armory.css";
 
 import Armory_Item from "./armory_item/armory_item.jsx";
 import Armory_Title from "./armory_title/armory_title.jsx";
+import Corruptions from "./corruptions/corruptions.jsx";
 
 export default class Armory extends Component {
 	constructor(props) {
 	    super(props);
-		this.state = {
-	    	isLoaded: false,
-	  	}
+		this.state = {}
 	}
 
 	UNSAFE_componentWillMount() {
@@ -21,9 +20,7 @@ export default class Armory extends Component {
 			   .then(result => {
 					this.setState({ 
 						data: result ,
-						isLoaded: true,
 					});
-					console.log("equipped_items", this.state.data.data.equipped_items);
 			    }
 		    )
 		} catch (error) {}
@@ -73,7 +70,9 @@ export default class Armory extends Component {
 									</li>
 								</ul>
 							</div> {/*armory_items_container_left*/}
-							<div className="armory_items_container_center" />
+							<div className="armory_items_container_center xs-fce">
+								<Corruptions data={this.state.data.data.equipped_items}/>
+							</div>
 							<div className="armory_items_container_right">
 								<ul>
 									<li>

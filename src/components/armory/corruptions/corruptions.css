@@ -1,0 +1,66 @@
+.corruptions {
+	width: 48px;
+    height: 31px;
+	justify-content: center;
+	align-items: center;
+}
+.corruptions_icon {
+	width: 48px;
+    height: 31px;
+	margin-top: 55px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+.corruptions_icon:after {
+	content: "";
+	position: absolute;
+	width: 48px;
+    height: 31px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../../../img/corruption_icon_spite.png");
+	background-position: 0px -6px;
+	background-repeat: no-repeat;
+	opacity: 1;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.corruptions_icon:before {
+	content: "";
+	position: absolute;
+	width: 48px;
+    height: 31px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../../../img/corruption_icon_spite.png");
+	background-position: -48px -6px;
+	background-repeat: no-repeat;
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.corruptions_icon:hover:after {
+	opacity: 0;
+}
+.corruptions_icon:hover:before {
+	opacity: 1;
+}
+@media screen and (max-width: 1199px) {
+	.corruptions_icon {
+		width: 48px;
+	    height: 31px;
+		margin-top: 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+	}
+}

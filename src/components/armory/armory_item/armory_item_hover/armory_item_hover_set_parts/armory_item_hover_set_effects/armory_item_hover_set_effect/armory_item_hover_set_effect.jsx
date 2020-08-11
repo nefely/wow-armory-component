@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import axios from 'axios';
-import store from './../../../../../../../store/store.jsx';
 
 import "./armory_item_hover_set_effect.css";
 

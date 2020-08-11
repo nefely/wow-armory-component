@@ -12,14 +12,15 @@
 	padding: 0 10px;
 	border-radius: 0;
 	color: var(--white);
-	background: var(--chrome);
-	border-top: 1px solid var(--dark);
+	background: rgb(15, 9, 27);
 }
 .rosters_list > li.active_roster button {
-	background: var(--default-color);
+	background: rgb(149, 109, 209);
+	color: var(--white);
 }
 .rosters_list > li button:hover {
-	background: var(--gray);
+	background: rgb(149, 109, 209);
+	color: var(--white);
 }
 .rosters_list > li:first-child > button {
 	border-top: 0;
