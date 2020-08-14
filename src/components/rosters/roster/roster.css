@@ -9,10 +9,15 @@
 	width: inherit;
 	height: inherit;
 	text-align: left;
-	padding: 0 10px;
+	padding: 0;
 	border-radius: 0;
 	color: var(--white);
 	background: rgb(15, 9, 27);
+}
+.rosters_list > li button h6 {
+	width: inherit;
+	height: inherit;
+	padding: 0 10px;
 }
 .rosters_list > li.active_roster button {
 	background: rgb(149, 109, 209);

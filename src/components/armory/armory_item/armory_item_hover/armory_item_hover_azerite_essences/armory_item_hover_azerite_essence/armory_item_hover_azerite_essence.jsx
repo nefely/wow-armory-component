@@ -34,6 +34,7 @@ export default class Armory_Item_Hover_Azerite_Essence extends Component {
 								rank_lvl = "LEGENDARY";
 								break;
 							default:
+								rank_lvl = "COMMON";
 								break;
 						}
 						this.setState({ 

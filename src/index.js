@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
+import App from "./App.jsx";
 
 function windowResize(){
 	let vh = window.innerHeight * 0.01;
@@ -9,4 +9,5 @@ function windowResize(){
 windowResize();
 window.addEventListener("resize", windowResize);
 
-ReactDOM.render(<App />,document.getElementById('root'));
+ReactDOM.render(<App/>,document.getElementById('root'));
+

@@ -53,6 +53,7 @@
 	width: 40px;
 	height: 40px;
 	left: -50px;
+	top: 0;
 	background: rgb(149, 109, 209);
 	color: var(--white);
 	border: 1px solid rgb(149, 109, 209);
@@ -60,7 +61,7 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 3px;
-	margin: 10px 0 0 0;
+	
 	-webkit-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;

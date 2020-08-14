@@ -3,13 +3,13 @@
 	min-width: 300px;
 	width: calc( (100% - 20px) / 3 );
 	height: auto;
-	top: 10%;
+	top: 0%;
 	left: 50%;
-	background: rgb(15, 9, 27);
-	-webkit-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
 	transform: translateX(-50%);
+	background: rgb(15, 9, 27);
+	-webkit-transition: all 0.15s ease-in-out;
+	-o-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
 	overflow:hidden;
 	opacity: 0;
 	visibility: hidden;
@@ -20,7 +20,6 @@
 }
 .corruptions:hover .corruptions_hover {
 	opacity: 1;
-	top: 0;
 	visibility: visible;
 	z-index: 2;
 }
@@ -30,11 +29,21 @@
 }
 @media screen and (max-width: 559px) {
 	.corruptions_hover {
+		min-width: 260px;
+	    width: calc( (100% - 20px) / 3 );
+	    padding: 10px 10px 10px 10px;
+	}
+	.corruptions_hover_title {
+		margin-bottom: 5px;
+	}
+}
+@media screen and (max-width: 360px) {
+	.corruptions_hover {
 		min-width: 210px;
 	    width: calc( (100% - 20px) / 3 );
 	    padding: 10px 10px 10px 10px;
 	}
 	.corruptions_hover_title {
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 	}
 }

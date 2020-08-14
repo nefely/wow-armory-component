@@ -52,7 +52,7 @@
 .corruptions_icon:hover:before {
 	opacity: 1;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 990px) {
 	.corruptions_icon {
 		width: 48px;
 	    height: 31px;

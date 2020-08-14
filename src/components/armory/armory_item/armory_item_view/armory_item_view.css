@@ -87,7 +87,7 @@
 .armory_items_container_weapon ul > li:first-child .armory_item_view .armory_item_view_info_title {
 	text-align: right;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 990px) {
 	.armory_item_view_info{
 		display: none;
 	}

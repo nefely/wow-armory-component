@@ -30,7 +30,6 @@
 }
 .armory_items_container_left ul > li,
 .armory_items_container_right ul > li {
-    /* background: var(--light); */
     height: 60px;
     width: 100%;
     margin-bottom: 10px;
@@ -54,53 +53,22 @@
 .armory_items_container_weapon ul > li {
     height: 60px;
     width: calc( (100% - 20px) / 3 );
-    /* background: var(--light); */
 }
 .armory_items_container_weapon ul > li:first-child {
     margin-right: 10px;
 }
-
-/* @media screen and (max-width: 1440px) {
-    .armory_items_container_center {
-        display: none;
-    }
-    .armory_items_container_left,
-    .armory_items_container_right {
-        width: calc(50% - 5px);
-    }  
-    .armory_items_container_weapon ul {
-        width: 100%;
-    }
-    .armory_items_container_weapon ul > li {
-        width: calc(50% - 5px);
-    }
-}
-@media screen and (max-width: 991px) {
-    .armory_items_container_left,
-    .armory_items_container_right {
-        width: 100%;
-    }  
-    .armory_items_container_weapon ul {
-        width: 100%;
-    }
-    .armory_items_container_weapon ul > li {
-        width: 100%;
-    }
-    .armory_items_container_weapon ul > li:first-child {
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
-} */
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 990px) {
     #armory {
         background-position: center 50%;
     }
     .armory_items_container_left ul > li,
     .armory_items_container_right ul > li {
         height: 40px;
+        width: 40px;
     }
     .armory_items_container_weapon ul > li {
         height: 40px;
+        width: 40px;
     }
     .armory_items_container_left,
     .armory_items_container_right{
