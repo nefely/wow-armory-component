@@ -1,0 +1,8 @@
+.myphics_plus_progress {
+	width: 100%;
+	padding: 40px 0;
+}
+.myphics_plus_progress_title {
+	color: var(--white);
+	margin-bottom: 20px;
+}

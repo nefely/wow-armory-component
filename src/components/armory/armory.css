@@ -8,6 +8,25 @@
     background-position: center calc(50% - 100px);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+}
+#armory:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 200px;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(15,9,27,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(15,9,27,1) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(15,9,27,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#0f091b',GradientType=0 );
+    z-index: 1;
+}
+#armory .wrapper {
+    position: relative;
+    z-index: 2;
 }
 .armory_items_container {
     display: flex;

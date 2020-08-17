@@ -1,3 +1,6 @@
+.armory_item_hover_sockets > .armory_item_hover_socket:not(:last-child){
+	margin-bottom: 5px;
+}
 .armory_item_hover_socket {
 	display: flex;
 	justify-content: flex-start;
@@ -8,7 +11,6 @@
 .armory_item_hover_socket > div {
 	width: 15px;
 	height: 15px;
-	margin-top: -3px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
