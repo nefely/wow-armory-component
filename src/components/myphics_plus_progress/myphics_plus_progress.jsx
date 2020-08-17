@@ -39,25 +39,42 @@ export default class Myphics_Plus_Progress extends Component {
 		        infinite: true,
 		        swipeToSlide: true,
 		        focusOnSelect: true,
-		        responsive: [{
-		            breakpoint: 991,
-		            settings: {
-		                slidesToShow: 3,
-						slidesToScroll: 1,
-						slidesPerRow: 1,
-						rows: 1,
-		                swipeToSlide: true
-		            }
-		        }, {
-		            breakpoint: 559,
-		            settings: {
-		                slidesToShow: 1,
-						slidesToScroll: 1,
-						slidesPerRow: 1,
-						rows: 1,
-		                swipeToSlide: true
-		            }
-		        }]
+		        centerMode: false,
+		        responsive: [
+			        {
+			            breakpoint: 991,
+			            settings: {
+			                slidesToShow: 3,
+							slidesToScroll: 1,
+							slidesPerRow: 1,
+							rows: 1,
+			                swipeToSlide: true,
+			                centerMode: true,
+			            }
+			        }, 
+			        {
+			            breakpoint: 767,
+			            settings: {
+			                slidesToShow: 2,
+							slidesToScroll: 1,
+							slidesPerRow: 1,
+							rows: 1,
+			                swipeToSlide: true,
+			                centerMode: true,
+			            }
+			        },
+			        {
+			            breakpoint: 559,
+			            settings: {
+			                slidesToShow: 1,
+							slidesToScroll: 1,
+							slidesPerRow: 1,
+							rows: 1,
+			                swipeToSlide: true,
+			                centerMode: true,
+			            }
+			        }
+		        ]
 		    };
 	        return (
 				<div id="myphics_plus_progress" className="myphics_plus_progress">
@@ -65,6 +82,8 @@ export default class Myphics_Plus_Progress extends Component {
 						<div className="myphics_plus_progress_title">
 							<h2>Mythic Keystone Dungeons</h2>
 						</div>
+					</div>
+					<div className="wrapper wide_wrapper">	
 						<div className="myphics_plus_progress_container">
 							<Slider {...settings}>
 								{this.state.data.map((data , i) => {
