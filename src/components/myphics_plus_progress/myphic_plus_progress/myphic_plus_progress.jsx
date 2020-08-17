@@ -23,13 +23,11 @@ export default class Myphic_Plus_Progress extends Component {
 				this.setState({
 					dungeonID: result.data.instances.filter(item => item.name === dungeon_name)[0].id
 				})
-				console.log(this.state.dungeonID)
 				axios.get("https://us.api.blizzard.com/data/wow/media/journal-instance/"+this.state.dungeonID+"?namespace=static-us&locale=en_US&access_token="+store.userData.accessToken+"")
 				.then(result => {
 					this.setState({
 						dungeonImage: result.data.assets[0].value
 					})
-					console.log(this.state.dungeonImage)
 			    })
 		    })
 		} catch (error) {}
@@ -37,7 +35,6 @@ export default class Myphic_Plus_Progress extends Component {
 
     render() {
     	try {
-    		
     		if ( (this.props.data.keystone_level >= 15) ) {
     			var key_rank = "LEGENDARY";
     		} 
@@ -53,7 +50,6 @@ export default class Myphic_Plus_Progress extends Component {
     		else {
     			var key_rank = "COMMON";
     		}	
-
 	        return (
 				<div className={"myphic_plus_progress " + key_rank}>
 					<div className="myphic_plus_progress_container">

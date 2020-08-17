@@ -3,8 +3,11 @@ import axios from 'axios';
 import store from './../../store/store.jsx';
 
 import "./myphics_plus_progress.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import Myphic_Plus_Progress from "./myphic_plus_progress/myphic_plus_progress.jsx"
+import Slider from "react-slick";
+import Myphic_Plus_Progress from "./myphic_plus_progress/myphic_plus_progress.jsx";
 
 export default class Myphics_Plus_Progress extends Component {
 	constructor(props) {
@@ -19,7 +22,6 @@ export default class Myphics_Plus_Progress extends Component {
 					this.setState({ 
 						data: result.data.best_runs.filter(item => item.is_completed_within_time === true) ,
 					});
-				    console.log(this.state.data)
 			    }
 		    );
 		} catch (error) {}
@@ -27,18 +29,50 @@ export default class Myphics_Plus_Progress extends Component {
 
     render() {
     	try {
+			const settings = {
+		        slidesToShow: 3,
+		        slidesToScroll: 1,
+		        slidesPerRow: 1,
+		        rows: 4,
+		        arrows: false,
+		        dots: false,
+		        infinite: true,
+		        swipeToSlide: true,
+		        focusOnSelect: true,
+		        responsive: [{
+		            breakpoint: 991,
+		            settings: {
+		                slidesToShow: 3,
+						slidesToScroll: 1,
+						slidesPerRow: 1,
+						rows: 1,
+		                swipeToSlide: true
+		            }
+		        }, {
+		            breakpoint: 559,
+		            settings: {
+		                slidesToShow: 1,
+						slidesToScroll: 1,
+						slidesPerRow: 1,
+						rows: 1,
+		                swipeToSlide: true
+		            }
+		        }]
+		    };
 	        return (
 				<div id="myphics_plus_progress" className="myphics_plus_progress">
 					<div className="wrapper">
 						<div className="myphics_plus_progress_title">
 							<h2>Mythic Keystone Dungeons</h2>
 						</div>
-						<div className="myphics_plus_progress_container xs-fss xs-fw">
-							{this.state.data.map((data , i) => {
-								return(
-									<Myphic_Plus_Progress data={data} key={i} />
-								)
-							})}
+						<div className="myphics_plus_progress_container">
+							<Slider {...settings}>
+								{this.state.data.map((data , i) => {
+									return(
+										<Myphic_Plus_Progress data={data} key={i} />
+									)
+								})}
+							</Slider>
 						</div>
 					</div>
 				</div>
