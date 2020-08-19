@@ -5,10 +5,25 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-position: center calc(50% - 100px);
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
+}
+.armory_character_background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.armory_character_background img {
+    min-width: 100%;
+    min-height: 100%;
+    object-position: center calc(50% - 100px);
+    object-fit: cover;
 }
 #armory:after {
     content: "";
@@ -77,8 +92,9 @@
     margin-right: 10px;
 }
 @media screen and (max-width: 990px) {
-    #armory {
-        background-position: center 50%;
+    .armory_character_background img {
+        object-position: center calc(50% - 50px);
+        object-fit: cover;
     }
     .armory_items_container_left ul > li,
     .armory_items_container_right ul > li {

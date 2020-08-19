@@ -7,13 +7,12 @@ var store = {
 		region: "eu",
 		locale: "en_GB",
 		nameSpace: "profile-eu",
-		nameSlug: "искра-безумия",
+		nameSpaceStatic: "static-eu",
+		nameSpaceDynamic: "dynamic-eu",
 		realmSlug: "Soulflayer".toLowerCase(),
-		characterName: "анука".toLowerCase(),
-		accessToken: "USsZ4Bz0FW8mB8u1AHejnAjOvadw8Ic3Gj",
+		characterName: "азала".toLowerCase(),
+		accessToken: "USg9Mo1RXfYTvDb3h2Qi9uB9354wSDuZDq",
 		season: 4
-		/*characterID: "193910968",*/
-		/*realmID: "1604",*/
 	}
 }
 export default window.store = store;

@@ -38,7 +38,10 @@ export default class Armory extends Component {
     render() {
     	try {
 	        return (
-				<div id="armory" style={{backgroundImage: "url("+this.state.characterImg+")"}}>
+				<div id="armory">
+					<div className="armory_character_background">
+						<img src={this.state.characterImg} alt="" />
+					</div>
 					<div className="wrapper">
 						<Armory_Title />
 						<div className="armory_items_container">

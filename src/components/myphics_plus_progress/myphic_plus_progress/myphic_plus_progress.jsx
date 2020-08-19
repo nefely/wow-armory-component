@@ -12,23 +12,19 @@ export default class Myphic_Plus_Progress extends Component {
 
 	UNSAFE_componentWillMount() {
 		try {
-			axios.get("https://us.api.blizzard.com/data/wow/journal-instance/index?namespace=static-us&locale=en_US&access_token="+store.userData.accessToken+"")
+			axios.get("https://"+store.userData.region+".api.blizzard.com/data/wow/mythic-keystone/dungeon/"+this.props.data.dungeon.id+"?namespace="+store.userData.nameSpaceDynamic+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
 			.then(result => {
-				var dungeon_name = "";
-				if ( this.props.data.dungeon.name !== "Operation: Mechagon - Workshop" && this.props.data.dungeon.name !== "Operation: Mechagon - Junkyard" ) {
-					dungeon_name = this.props.data.dungeon.name;
-				} else {
-					dungeon_name = "Operation: Mechagon";
-				}
 				this.setState({
-					dungeonID: result.data.instances.filter(item => item.name === dungeon_name)[0].id
+					dungeonID: result.data.dungeon.id
 				})
-				axios.get("https://us.api.blizzard.com/data/wow/media/journal-instance/"+this.state.dungeonID+"?namespace=static-us&locale=en_US&access_token="+store.userData.accessToken+"")
-				.then(result => {
-					this.setState({
-						dungeonImage: result.data.assets[0].value
-					})
-			    })
+				try {
+					axios.get("https://"+store.userData.region+".api.blizzard.com/data/wow/media/journal-instance/"+this.state.dungeonID+"?namespace="+store.userData.nameSpaceStatic+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
+						.then(result => {
+							this.setState({
+								dungeonImage: result.data.assets[0].value
+							})
+					    })
+			    } catch (error) {}
 		    })
 		} catch (error) {}
   	}
