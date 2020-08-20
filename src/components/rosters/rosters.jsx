@@ -21,6 +21,20 @@ export default class Rosters extends Component {
 					this.setState({ 
 						data: result ,
 					});
+					/*sort*/
+					var sortByName = result.data.members.slice(0)
+					sortByName.sort(function(a,b) {
+						var x = a.character.name.toLowerCase();
+						var y = b.character.name.toLowerCase();
+						return x < y ? -1 : x > y ? 1 : 0;
+					});
+					var sortByRank = sortByName.slice(0)
+					sortByRank.sort(function(a,b) {
+						return a.rank - b.rank
+					});
+					this.setState({ 
+						data: sortByRank ,
+					});
 			    }
 		    );
 		} catch (error) {}
@@ -46,7 +60,7 @@ export default class Rosters extends Component {
 							</div>
 						</div>
 						<ul className="rosters_list">
-							{this.state.data.data.members.map((data, i) => 
+							{this.state.data.map((data, i) => 
 	                            <Roster key={i} data={data} />
 	                        )}
 						</ul>

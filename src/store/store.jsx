@@ -10,7 +10,7 @@ var store = {
 		nameSpaceStatic: "static-eu",
 		nameSpaceDynamic: "dynamic-eu",
 		realmSlug: "Soulflayer".toLowerCase(),
-		characterName: "азала".toLowerCase(),
+		characterName: "анука".toLowerCase(),
 		accessToken: "USg9Mo1RXfYTvDb3h2Qi9uB9354wSDuZDq",
 		season: 4
 	}
