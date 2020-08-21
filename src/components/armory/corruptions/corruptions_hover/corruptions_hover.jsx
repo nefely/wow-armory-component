@@ -6,7 +6,6 @@ import Corruptions_Hover_Item from "./corruptions_hover_item/corruptions_hover_i
 
 export default class Corruptions_Hover extends Component {
 	render() { 
-    	var skill_items_array = this.props.data.filter(item => item.spells !== undefined && item.spells !== null)
     	try {
     		 return (
 				<div className="corruptions_hover">

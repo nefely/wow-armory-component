@@ -6,13 +6,14 @@ var store = {
 	userData: {
 		region: "eu",
 		locale: "en_GB",
-		nameSpace: "profile-eu",
-		nameSpaceStatic: "static-eu",
-		nameSpaceDynamic: "dynamic-eu",
 		realmSlug: "Soulflayer".toLowerCase(),
 		characterName: "анука".toLowerCase(),
-		accessToken: "USg9Mo1RXfYTvDb3h2Qi9uB9354wSDuZDq",
-		season: 4
+		accessToken: "USaoOGgkiejHTq1kNlQG38tvo1qQyZcWWl",
+		season: 4,
+
+		/*hidden data*/
+		/*clientID: "c03a0521a7b54bf29e501101b4b69007",
+		ClientSecret: "bpjGN3KqGWmbibk4Fn74CDsFP2YQOdqo",*/
 	}
 }
 export default window.store = store;
