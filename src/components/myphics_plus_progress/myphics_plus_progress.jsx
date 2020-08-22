@@ -36,7 +36,7 @@ export default class Myphics_Plus_Progress extends Component {
 		        rows: 1,
 		        arrows: false,
 		        dots: false,
-		        infinite: true,
+		        infinite: false,
 		        centerMode: false,
 		        responsive: [
 			        {

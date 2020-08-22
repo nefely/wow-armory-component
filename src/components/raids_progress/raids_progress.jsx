@@ -23,9 +23,7 @@ export default class Raids_Progress extends Component {
 						this.setState({ 
 							data: result.data.expansions[result.data.expansions.length-1].instances
 						});
-						console.log(result.data.expansions)
 			    	}
-					console.log(this.state.data)
 			    }
 		    );
 		} catch (error) {}
