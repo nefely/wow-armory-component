@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import store from './../../store/store.jsx';
 
-import "./myphics_plus_progress.css";
+import "./raids_progress.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import store from './../../store/store.jsx';
 
 import Slider from "react-slick";
-import Myphic_Plus_Progress from "./myphic_plus_progress/myphic_plus_progress.jsx";
+import Raid_Progress from "./raid_progress/raid_progress.jsx";
 
-export default class Myphics_Plus_Progress extends Component {
+export default class Raids_Progress extends Component {
 	constructor(props) {
 	    super(props);
 		this.state = {}
@@ -17,11 +17,15 @@ export default class Myphics_Plus_Progress extends Component {
 
 	UNSAFE_componentWillMount() {
 		try {
-			axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"/mythic-keystone-profile/season/"+store.gameData.seasonNumber+"?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
+			axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"/encounters/raids?namespace="+store.userData.nameSpace+"&locale="+store.userData.lacale+"&access_token="+store.userData.accessToken+"")
 			    .then(result => {
-					this.setState({ 
-						data: result.data.best_runs.filter(item => item.is_completed_within_time === true) ,
-					});
+			    	if (result.data.expansions !== null && result.data.expansions !== undefined && result.data.expansions[result.data.expansions.length-1].expansion.name == store.gameData.expansionsName) {
+						this.setState({ 
+							data: result.data.expansions[result.data.expansions.length-1].instances
+						});
+						console.log(result.data.expansions)
+			    	}
+					console.log(this.state.data)
 			    }
 		    );
 		} catch (error) {}
@@ -30,19 +34,19 @@ export default class Myphics_Plus_Progress extends Component {
     render() {
     	try {
 			const settings = {
-		        slidesToShow: 4,
+		        slidesToShow: 3,
 		        slidesToScroll: 1,
 		        slidesPerRow: 1,
 		        rows: 1,
 		        arrows: false,
 		        dots: false,
-		        infinite: true,
+		        infinite: false,
 		        centerMode: false,
 		        responsive: [
 			        {
 			            breakpoint: 991,
 			            settings: {
-			                slidesToShow: 3,
+			                slidesToShow: 2,
 							slidesToScroll: 1,
 							slidesPerRow: 1,
 							rows: 1,
@@ -53,7 +57,7 @@ export default class Myphics_Plus_Progress extends Component {
 			        {
 			            breakpoint: 767,
 			            settings: {
-			                slidesToShow: 2,
+			                slidesToShow: 1,
 							slidesToScroll: 1,
 							slidesPerRow: 1,
 							rows: 1,
@@ -75,20 +79,20 @@ export default class Myphics_Plus_Progress extends Component {
 		        ]
 		    };
 	        return (
-				<div id="myphics_plus_progress" className="myphics_plus_progress">
+				<div id="raids_progress" className="raids_progress">
 					<div className="wrapper">
-						<div className="myphics_plus_progress_title">
-							<h2>Mythic Keystone Dungeons</h2>
+						<div className="raids_progress_title">
+							<h2>Raids Progress</h2>
 						</div>
 					</div>
 					<div className="wrapper wide_wrapper">	
-						<div className="myphics_plus_progress_container">
+						<div className="raids_progress_container">
 							<Slider {...settings}>
-								{this.state.data.map((data , i) => {
-									return(
-										<Myphic_Plus_Progress data={data} key={i} />
-									)
-								})}
+							{this.state.data.map((data , i) => {
+								return(
+									<Raid_Progress data={data} key={i} />
+								)
+							})}
 							</Slider>
 						</div>
 					</div>
@@ -96,7 +100,7 @@ export default class Myphics_Plus_Progress extends Component {
 	        )
     	} catch (error) {
     		return (
-				<div id="myphics_plus_progress" className="xs-hide" />
+				<div id="raids_progress" className="xs-hide" />
     		)
     	}
     }

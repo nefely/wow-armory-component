@@ -8,12 +8,14 @@ var store = {
 		locale: "en_GB",
 		realmSlug: "Soulflayer".toLowerCase(),
 		characterName: "анука".toLowerCase(),
-		accessToken: "USaoOGgkiejHTq1kNlQG38tvo1qQyZcWWl",
-		season: 4,
-
+		accessToken: "US84OU6MIMw1UwuC47GgleleySRhGmbv6I",
 		/*hidden data*/
 		/*clientID: "c03a0521a7b54bf29e501101b4b69007",
 		ClientSecret: "bpjGN3KqGWmbibk4Fn74CDsFP2YQOdqo",*/
+	},
+	gameData: {
+		seasonNumber: 4,
+		expansionsName: "Battle for Azeroth",
 	}
 }
 export default window.store = store;

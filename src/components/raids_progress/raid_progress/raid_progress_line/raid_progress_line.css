@@ -1,0 +1,67 @@
+.raid_progress_line{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	cursor: pointer;
+}
+.raid_progress_container > .raid_progress_line:not(:last-child) {
+	margin-bottom: 10px;
+}
+.raid_progress_line_title {
+	width: 70px;
+}
+.raid_progress_line_container {
+	width: calc(100% - 70px);
+	background: var(--black);
+	height: 30px;
+	border-radius: 3px;
+	border: 1px solid var(--light);
+	overflow: hidden;
+	position: relative;
+}
+.raid_progress_line_container_done {
+	position: absolute;
+	z-index: 1;
+	display: block;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.raid_progress_line_container_line {
+	width: 20%;
+	height: 28px;
+	background: rgb(149, 109, 209);
+	border-radius: 3px;
+	box-shadow:  inset 1px 1px 3px var(--white), inset -1px -1px 3px var(--black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.raid_progress_line_container_line.zero {
+	width: 0;
+}
+.raid_progress_line_hover_container {
+	height: 0;
+	opacity: 0;
+	margin-top: 0;
+	padding: 0;
+	overflow-x: hidden;
+	width: calc(100% - 70px);
+	margin-left: 70px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-wrap: wrap;
+	border: 1px solid var(--light);
+	background: rgb(15, 9, 27);
+	color: #0f0;
+	border-radius: 3px;
+}
+.raid_progress_line_hover_container.active_details {
+	height: auto;
+	opacity: 1;
+	margin-top: 5px;
+	padding: 5px;
+}
