@@ -25,3 +25,12 @@
 .raid_progress_container {
 	padding: 0 20px 20px 20px;
 }
+@media screen and (max-width: 990px) {
+	.raid_progress_title {
+		padding: 10px 5px;
+		text-align: center;
+	}
+	.raid_progress_container {
+		padding: 0 10px 10px 10px;
+	}
+}
