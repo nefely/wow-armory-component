@@ -8,7 +8,7 @@ var store = {
 		locale: "en_GB",
 		realmSlug: "Soulflayer".toLowerCase(),
 		characterName: "анука".toLowerCase(),
-		accessToken: "US84OU6MIMw1UwuC47GgleleySRhGmbv6I",
+		accessToken: "USKRBX6bGioqjHTR62n73zd0reWHyIvaoq",
 		/*hidden data*/
 		/*clientID: "c03a0521a7b54bf29e501101b4b69007",
 		ClientSecret: "bpjGN3KqGWmbibk4Fn74CDsFP2YQOdqo",*/

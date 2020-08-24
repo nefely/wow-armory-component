@@ -28,7 +28,7 @@ export default class App extends Component {
         axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
             .then(result => {
               store.userData.nameSlug = result.data.guild.name.toLowerCase().replace(/ /g, '-')
-              this.setState({ 
+              this.setState({
                 isLoaded: true
               });
             }

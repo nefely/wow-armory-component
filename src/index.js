@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from "./App.jsx";
+import * as serviceWorker from './serviceWorker';
 
 function windowResize(){
 	let vh = window.innerHeight * 0.01;
@@ -10,4 +11,4 @@ windowResize();
 window.addEventListener("resize", windowResize);
 
 ReactDOM.render(<App/>,document.getElementById('root'));
-
+serviceWorker.register();
