@@ -39,7 +39,8 @@ export default class Raids_Progress extends Component {
 		        arrows: false,
 		        dots: false,
 		        infinite: false,
-		        centerMode: false,
+				swipeToSlide: true,
+				centerMode: false,
 		        responsive: [
 			        {
 			            breakpoint: 991,
@@ -49,7 +50,7 @@ export default class Raids_Progress extends Component {
 							slidesPerRow: 1,
 							rows: 1,
 			                swipeToSlide: true,
-			                centerMode: true,
+			                centerMode: false,
 			            }
 			        }, 
 			        {
@@ -60,7 +61,7 @@ export default class Raids_Progress extends Component {
 							slidesPerRow: 1,
 							rows: 1,
 			                swipeToSlide: true,
-			                centerMode: true,
+			                centerMode: false,
 			            }
 			        },
 			        {
