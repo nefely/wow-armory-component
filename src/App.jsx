@@ -19,11 +19,6 @@ export default class App extends Component {
     }
 
     UNSAFE_componentWillMount() {
-      
-      store.userData.nameSpace = "profile-" + store.userData.region;
-      store.userData.nameSpaceStatic = "static-" + store.userData.region;
-      store.userData.nameSpaceDynamic = "dynamic-" + store.userData.region;
-
       try {
         axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
             .then(result => {

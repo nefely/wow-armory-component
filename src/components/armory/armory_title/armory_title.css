@@ -2,6 +2,9 @@
     text-align: center;
     margin-bottom: 20px;
 }
+.armory_title_info {
+	text-shadow: 1px 0px 2px var(--black) , 0px 1px 2px var(--black) , -1px 0px 2px var(--black) , 0px -1px 2px var(--black);
+}
 .armory_title_class h6 {
 	display: flex;
 	justify-content: center;
@@ -11,7 +14,7 @@
 	padding: 0 5px;
 	color: var(--light);
 }
-.armory_title_class h6 > p:nth-child(1){
+/* .armory_title_class h6 > p:nth-child(1){
 	width: 100px;
 	text-align: right;
 }
@@ -21,4 +24,4 @@
 .armory_title_class h6 > p:nth-child(5){
 	width: 100px;
 	text-align: left;
-}
+} */
