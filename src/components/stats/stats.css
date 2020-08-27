@@ -1,0 +1,160 @@
+#stats {
+	width: 100%;
+	padding: 40px 0;
+}
+.stats_title {
+	color: var(--white);
+	margin-bottom: 20px;
+	text-align: center;
+}
+.stats_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	background: rgb(15, 9, 27);
+	border-radius: 3px;
+	border: 2px solid var(--light);
+}
+.stats_container > div {
+	width: 25%;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 200px;
+	position: relative;
+}
+.stats_container > div.crit:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.1;
+	z-index: 1;
+	background: #e01c1c;
+}
+.stats_container > div.haste:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.1;
+	z-index: 1;
+	background: #0ed59b;
+}
+.stats_container > div.mastery:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.1;
+	z-index: 1;
+	background: #9256ff;
+}
+.stats_container > div.versatility:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.1;
+	z-index: 1;
+	background: #bfbfbf;
+}
+.stats_container > div > h4 {
+	text-align: center;	
+	width: 100%;
+	position: relative;
+	z-index: 2;
+}
+.stats_container > div > svg {
+	width: 60px;
+	margin-right: 10px;
+	position: relative;
+	z-index: 2;
+}
+.stats_container > div.crit > svg{
+	stroke: #e01c1c
+}
+.stats_container > div.haste > svg{
+	stroke: #0ed59b
+}
+.stats_container > div.mastery > svg{
+	stroke: #9256ff
+}
+.stats_container > div.versatility > svg{
+	stroke: #bfbfbf
+}
+.stats_container > div > div {
+	color: var(--white);
+	position: relative;
+	z-index: 2;
+}
+.stats_container > div > div > p:first-child {
+	font-weight: bold;
+}
+.stats_container > div.crit{
+	color: #e01c1c;
+}
+.stats_container > div.haste{
+	color: #0ed59b;
+}
+.stats_container > div.mastery{
+	color: #9256ff;
+}
+.stats_container > div.versatility{
+	color: #bfbfbf;
+}
+@media screen and (max-width: 767px) {
+	.stats_container {
+		margin: 0 auto;
+	}
+	.stats_container > div {
+		width: 50%;
+		height: 120px;
+	}
+	.stats_container > div:nth-child(n+3) {
+		margin-bottom: 0;
+	}
+	.stats_container > div:nth-child(odd) > svg {
+		margin-right: 5px;
+	}
+	.stats_container > div:nth-child(even) > svg {
+		order: 2;
+		margin-right: 0;
+		margin-left: 5px;
+	}
+	.stats_container > div:nth-child(even) > div {
+		order: 1;
+		text-align: right;
+	}
+	.stats_container > div.crit{
+		border-right: 1px solid var(--light);
+		border-bottom: 1px solid var(--light);
+	}
+	.stats_container > div.haste{
+		border-left: 1px solid var(--light);
+		border-bottom: 1px solid var(--light);
+	}
+	.stats_container > div.mastery{
+		border-right: 1px solid var(--light);
+		border-top: 1px solid var(--light);
+	}
+	.stats_container > div.versatility{
+		border-left: 1px solid var(--light);
+		border-top: 1px solid var(--light);
+	}
+}

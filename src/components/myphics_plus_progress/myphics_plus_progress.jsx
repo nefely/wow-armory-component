@@ -76,7 +76,7 @@ export default class Myphics_Plus_Progress extends Component {
 		        ]
 		    };
 	        return (
-				<div id="myphics_plus_progress" className="myphics_plus_progress">
+				<div id="myphics_plus_progress">
 					<div className="wrapper">
 						<div className="myphics_plus_progress_title">
 							<h2>Mythic Keystone Dungeons</h2>
@@ -97,7 +97,7 @@ export default class Myphics_Plus_Progress extends Component {
 	        )
     	} catch (error) {
     		return (
-				<div id="myphics_plus_progress" className="xs-hide" />
+				<div className="xs-hide" />
     		)
     	}
     }

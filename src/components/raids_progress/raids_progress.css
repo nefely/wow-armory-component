@@ -1,25 +1,26 @@
-.raids_progress {
+#raids_progress {
 	width: 100%;
 	padding: 40px 0;
 }
 .raids_progress_title {
 	color: var(--white);
 	margin-bottom: 20px;
+	text-align: center;
 }
 @media screen and (max-width: 991px) and (min-width: 768px){
-	.raids_progress .wrapper.wide_wrapper {
+	#raids_progress .wrapper.wide_wrapper {
 		width: 100%;
 		max-width: 100%;
 	}
 }
 @media screen and (max-width: 767px) and (min-width: 560px){
-	.raids_progress .wrapper.wide_wrapper {
+	#raids_progress .wrapper.wide_wrapper {
 		width: 100%;
 		max-width: 100%;
 	}
 }
 @media screen and (max-width: 559px){
-	.raids_progress .wrapper.wide_wrapper {
+	#raids_progress .wrapper.wide_wrapper {
 		width: 100%;
 		max-width: 100%;
 	}

@@ -53,7 +53,7 @@
 	justify-content: flex-end;
 	align-items: center;
 	flex-wrap: wrap;
-	border: 1px solid var(--light);
+	border: 0px solid var(--light);
 	background: rgb(15, 9, 27);
 	color: #0f0;
 	border-radius: 3px;
@@ -63,6 +63,7 @@
 	opacity: 1;
 	margin-top: 5px;
 	padding: 5px;
+	border: 0px solid var(--light);
 }
 @media screen and (max-width: 767px) {
 	.raid_progress_line_hover_container {

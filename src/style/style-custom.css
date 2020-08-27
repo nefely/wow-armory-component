@@ -1,7 +1,10 @@
 /* styles write here */
 main {position:relative}
 section{padding:20px 0}
-body {background: rgb(15, 9, 27)}
+body {
+	background: rgb(15, 9, 27);
+	text-shadow: 1px 0px 1px var(--black) , 0px 1px 1px var(--black) , -1px 0px 1px var(--black) , 0px -1px 1px var(--black);
+}
 .app {
 	display: flex;
 	justify-content: space-between;

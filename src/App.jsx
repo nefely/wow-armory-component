@@ -7,6 +7,7 @@ import "./style/style-custom.css";
 
 import Rosters from "./components/rosters/rosters.jsx";
 import Armory from "./components/armory/armory.jsx";
+import Stats from "./components/stats/stats.jsx";
 import Myphics_Plus_Progress from "./components/myphics_plus_progress/myphics_plus_progress.jsx";
 import Raids_Progress from "./components/raids_progress/raids_progress.jsx";
 
@@ -38,6 +39,7 @@ export default class App extends Component {
             <div className="app">
               <div className="workspace_container">
                 <Armory />
+                <Stats /> 
                 <Myphics_Plus_Progress />
                 <Raids_Progress />
               </div>
@@ -46,12 +48,12 @@ export default class App extends Component {
           );
         } catch (error) {
           return (
-            <div className="app" />
+            <div className="xs-hide" />
           );
         }
       } else {
         return (
-          <div className="app" />
+          <div className="xs-hide" />
         );
       }
     }

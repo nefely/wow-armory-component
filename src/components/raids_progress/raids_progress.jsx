@@ -78,7 +78,7 @@ export default class Raids_Progress extends Component {
 		        ]
 		    };
 	        return (
-				<div id="raids_progress" className="raids_progress">
+				<div id="raids_progress">
 					<div className="wrapper">
 						<div className="raids_progress_title">
 							<h2>Raids Progress</h2>
@@ -99,7 +99,7 @@ export default class Raids_Progress extends Component {
 	        )
     	} catch (error) {
     		return (
-				<div id="raids_progress" className="xs-hide" />
+				<div className="xs-hide" />
     		)
     	}
     }
