@@ -53,7 +53,9 @@ export default class Rosters extends Component {
 					<div className="rosters_container">
 						<div className="xs-fbc rosters_top_container">
 							<div className="rosters_hover_button">
-								<button onClick={toggleRosterList}><i className={ this.state.isVisible ? "fas fa-times" : "fas fa-users"}></i></button>
+								<button onClick={toggleRosterList}>
+									<i className={ this.state.isVisible ? "fas fa-times" : "fas fa-users"} />
+								</button>
 							</div>
 							<div className="rosters_title">
 								<h4>Rosters</h4>

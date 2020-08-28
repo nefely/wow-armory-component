@@ -63,7 +63,7 @@
 	opacity: 1;
 	margin-top: 5px;
 	padding: 5px;
-	border: 0px solid var(--light);
+	border: 1px solid var(--light);
 }
 @media screen and (max-width: 767px) {
 	.raid_progress_line_hover_container {

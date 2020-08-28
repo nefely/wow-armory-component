@@ -3,20 +3,25 @@ main {position:relative}
 section{padding:20px 0}
 body {
 	background: rgb(15, 9, 27);
-	text-shadow: 1px 0px 1px var(--black) , 0px 1px 1px var(--black) , -1px 0px 1px var(--black) , 0px -1px 1px var(--black);
 }
-.app {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	height: calc(var(--vh, 1vh) * 100);
-	overflow:hidden;
+body,body button,i:before {
+	text-shadow: 1px 0 1px var(--black) , 0 1px 1px var(--black) , -1px 0 1px var(--black) , 0 -1px 1px var(--black) !important;
+}
+body .form button {
+	text-shadow: 0 0 0 rgba(0,0,0,0) !important;
 }
 .workspace_container {
 	height: calc(var(--vh, 1vh) * 100);
 	width: 100%;
 	overflow-x: auto;
 	background: rgb(15, 9, 27);
+}
+#app {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	height: calc(var(--vh, 1vh) * 100);
+	overflow:hidden;
 }
 /* default media */
 /* xl */
@@ -29,3 +34,7 @@ body {
 @media screen and (min-width: 560px) and (max-width: 767px) {}
 /* xs */
 @media screen and (max-width: 559px) {}
+
+
+
+

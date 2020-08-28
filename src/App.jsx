@@ -2,14 +2,12 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import store from './store/store.jsx';
 
-import "./style/style.css";
-import "./style/style-custom.css";
-
 import Rosters from "./components/rosters/rosters.jsx";
 import Armory from "./components/armory/armory.jsx";
 import Stats from "./components/stats/stats.jsx";
 import Myphics_Plus_Progress from "./components/myphics_plus_progress/myphics_plus_progress.jsx";
 import Raids_Progress from "./components/raids_progress/raids_progress.jsx";
+import Logout from "./components/logout/logout.jsx";
 
 export default class App extends Component {
     constructor(props) {
@@ -23,7 +21,9 @@ export default class App extends Component {
       try {
         axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
             .then(result => {
-              store.userData.nameSlug = result.data.guild.name.toLowerCase().replace(/ /g, '-')
+              try {
+                store.userData.nameSlug = result.data.guild.name.toLowerCase().replace(/ /g, '-').replace(/'/g, '')
+              } catch (error) {}
               this.setState({
                 isLoaded: true
               });
@@ -44,6 +44,7 @@ export default class App extends Component {
                 <Raids_Progress />
               </div>
               <Rosters />
+              <Logout />  
             </div>
           );
         } catch (error) {

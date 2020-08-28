@@ -1,0 +1,22 @@
+#logout {
+    position: absolute;
+	width: 40px;
+	height: 40px;
+    left: 10px;
+    top: 10px;
+	background: var(--danger-color);
+	color: var(--white);
+    border: 1px solid var(--danger-color);
+    z-index: 999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+}
+#logout button {
+	width: 40px;
+	height: 40px;
+}
+#logout button i {
+	color: var(--white);
+}

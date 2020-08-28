@@ -5,6 +5,10 @@ import store from './store/store.jsx';
 import * as serviceWorker from './serviceWorker';
 
 import App from "./App.jsx";
+import Login from "./components/login/login.jsx";
+
+import "./style/style.css";
+import "./style/style-custom.css";
 
 function windowResize(){
 	let vh = window.innerHeight * 0.01;
@@ -26,6 +30,10 @@ axios.get("https://us.battle.net/oauth/token", {
 	}
 }).then(result => {
 	store.userData.accessToken = result.data.access_token;
-	ReactDOM.render(<App/>,document.getElementById('root'));
+	if (store.appData.isLogged === true) {
+		ReactDOM.render(<App/>,document.getElementById('root'));
+	} else {
+		ReactDOM.render(<Login/>,document.getElementById('root'));
+	}
 	serviceWorker.register();
 });
