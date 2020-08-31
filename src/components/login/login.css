@@ -35,8 +35,8 @@
 }
 #login .form > button , #login .workspace_container .wrapper.check > button {
 	width: 100%;
-	background: rgb(149, 109, 209);
-	border: 1px solid rgb(149, 109, 209);
+	background: var(--corruption);
+	border: 1px solid var(--corruption);
 	height: 40px;
 	margin-bottom: 0px;
     color: var(--white);
@@ -101,7 +101,7 @@
     height: 36px;
     width: 100%;
     padding: 0 16px;
-    background: #fff;
+    background: var(--common);
     border: 1px solid transparent;
     box-shadow: 0 .0625rem .125rem rgba(0, 0, 0, 0.15);
     border-radius: 3px;
@@ -122,7 +122,7 @@
     cursor: initial;
 }
 .select-search__select {
-    background: #fff;
+    background: var(--common);
     box-shadow: 0 .0625rem .125rem rgba(0, 0, 0, 0.15);
 }
 .select-search__options {
@@ -136,7 +136,7 @@
     height: 36px;
     width: 100%;
     padding: 0 16px;
-    background: #fff;
+    background: var(--common);
     border: none;
     outline: none;
     font-family: 'Noto Sans', sans-serif;
@@ -147,8 +147,8 @@
     height: 48px;
 }
 .select-search__option.is-selected {
-    background: rgb(149, 109, 209);
-    color: #fff;
+    background: var(--corruption);
+    color: var(--common);
 }
 .select-search__option.is-highlighted,
 .select-search__option:not(.is-selected):hover {
@@ -156,8 +156,8 @@
 }
 .select-search__option.is-highlighted.is-selected,
 .select-search__option.is-selected:hover {
-    background: rgb(149, 109, 209);
-    color: #fff;
+    background: var(--corruption);
+    color: var(--common);
 }
 .select-search__group-header {
     text-transform: uppercase;

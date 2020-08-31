@@ -7,7 +7,7 @@ export default class Raid_Progress_Line_Hover extends Component {
     	try {
 			return (
 				<div className="raid_progress_line_hover">
-					<p>{this.props.data.encounter.name}</p>
+					<p>- {this.props.data.encounter.name}</p>
 				</div>
 	        )
     	} catch (error) {

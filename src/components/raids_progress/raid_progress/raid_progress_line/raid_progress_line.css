@@ -32,7 +32,7 @@
 .raid_progress_line_container_line {
 	width: 20%;
 	height: 28px;
-	background: rgb(149, 109, 209);
+	background: var(--corruption);
 	border-radius: 3px;
 	display: flex;
 	justify-content: center;
@@ -54,7 +54,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	border: 0px solid var(--light);
-	background: rgb(15, 9, 27);
+	background: var(--dark_blue);
 	color: #0f0;
 	border-radius: 3px;
 }

@@ -13,7 +13,7 @@ export default class Armory_Item_Hover_Spell extends Component {
 				)
 			} else {
 				return (
-			    	<div className="armory_item_hover_spell" style={{color: "#00ff00"}}>
+			    	<div className="armory_item_hover_spell" style={{color: "var(--green)"}}>
 			    		{this.props.data.description}
 					</div>
 				)

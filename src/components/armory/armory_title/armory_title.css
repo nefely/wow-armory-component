@@ -1,6 +1,6 @@
 .armory_title_info {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .armory_title_class h6 {
 	display: flex;
@@ -26,5 +26,5 @@
 	color: var(--white);
 }
 .armory_title_main .armory_title_achivement {
-	color: var(--warning-color-dark);
+	color: var(--legendary);
 }

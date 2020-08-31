@@ -1,5 +1,5 @@
 .corruptions_hover_item_corruption_type {
-	color: rgb(149, 109, 209);
+	color: var(--corruption);
 	font-size: 0.9em;
 }
 .corruptions_hover_item .corruptions_hover_item_corruption_type{

@@ -198,7 +198,7 @@ textarea {
     color: #1eff00;
 }
 .COMMON {
-    color: #fff;
+    color: #ffffff;
 }
 .POOR {
     color: #9d9d9d;
@@ -266,6 +266,22 @@ textarea {
     --l: rgb(192, 192, 192);
     --sw: rgb(236, 236, 236);
     --w: rgb(255, 255, 255);
+
+    /* WOW color */
+    --legendary: #ff8000;
+    --epic: #c600ff;
+    --rare: #0081ff;
+    --uncommon: #1eff00;
+    --common: #ffffff;
+   
+    --corruption: #956dd1;
+    --dark_blue: #0f0918;
+    --green: #00ff00;
+
+    --haste: #0ed59b;
+    --crit: #e01c1c;
+    --mastery: #9256ff;
+    --versality: #bfbfbf;
 
     /* material shadow */
     --shadow_1: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);

@@ -12,7 +12,7 @@
 	padding: 0;
 	border-radius: 0;
 	color: var(--white);
-	background: rgb(15, 9, 27);
+	background: var(--dark_blue);
 }
 .rosters_list > li button h6 {
 	width: inherit;
@@ -20,11 +20,11 @@
 	padding: 0 10px;
 }
 .rosters_list > li.active_roster button {
-	background: rgb(149, 109, 209);
+	background: var(--corruption);
 	color: var(--white);
 }
 .rosters_list > li button:hover {
-	background: rgb(149, 109, 209);
+	background: var(--corruption);
 	color: var(--white);
 }
 .rosters_list > li:first-child > button {

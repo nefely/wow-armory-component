@@ -10,7 +10,7 @@
 .raid_progress_image {
 	width: 100%;
 	height: 200px;
-	background: rgb(15, 9, 27);
+	background: var(--dark_blue);
 }
 .raid_progress_image img {
 	width: 100%;

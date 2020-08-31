@@ -2,7 +2,7 @@
 main {position:relative}
 section{padding:20px 0}
 body {
-	background: rgb(15, 9, 27);
+	background: var(--dark_blue);
 }
 body,body button,i:before {
 	text-shadow: 1px 0 1px var(--black) , 0 1px 1px var(--black) , -1px 0 1px var(--black) , 0 -1px 1px var(--black) !important;
@@ -14,7 +14,7 @@ body .form button {
 	height: calc(var(--vh, 1vh) * 100);
 	width: 100%;
 	overflow-x: auto;
-	background: rgb(15, 9, 27);
+	background: var(--dark_blue);
 }
 #app {
 	display: flex;

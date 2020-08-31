@@ -1,4 +1,4 @@
 .armory_item_hover_enchantment {
-	color: #00ff00;
+	color: var(--green);
 	font-size: 0.9em;
 }

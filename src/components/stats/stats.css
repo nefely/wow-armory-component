@@ -12,7 +12,7 @@
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	background: rgb(15, 9, 27);
+	background: var(--dark_blue);
 	border-radius: 3px;
 	border: 2px solid var(--light);
 }
@@ -36,7 +36,7 @@
 	height: 100%;
 	opacity: 0.1;
 	z-index: 1;
-	background: #e01c1c;
+	background: var(--crit);
 }
 .stats_container > div.haste:after{
 	content: "";
@@ -48,7 +48,7 @@
 	height: 100%;
 	opacity: 0.1;
 	z-index: 1;
-	background: #0ed59b;
+	background: var(--haste);
 }
 .stats_container > div.mastery:after{
 	content: "";
@@ -60,7 +60,7 @@
 	height: 100%;
 	opacity: 0.1;
 	z-index: 1;
-	background: #9256ff;
+	background: var(--mastery);
 }
 .stats_container > div.versatility:after{
 	content: "";
@@ -72,7 +72,7 @@
 	height: 100%;
 	opacity: 0.1;
 	z-index: 1;
-	background: #bfbfbf;
+	background: var(--versality);
 }
 .stats_container > div > h4 {
 	text-align: center;	
@@ -87,16 +87,16 @@
 	z-index: 2;
 }
 .stats_container > div.crit > svg{
-	stroke: #e01c1c
+	stroke: var(--crit)
 }
 .stats_container > div.haste > svg{
-	stroke: #0ed59b
+	stroke: var(--haste)
 }
 .stats_container > div.mastery > svg{
-	stroke: #9256ff
+	stroke: var(--mastery)
 }
 .stats_container > div.versatility > svg{
-	stroke: #bfbfbf
+	stroke: var(--versality)
 }
 .stats_container > div > div {
 	color: var(--white);
@@ -107,16 +107,16 @@
 	font-weight: bold;
 }
 .stats_container > div.crit{
-	color: #e01c1c;
+	color: var(--crit);
 }
 .stats_container > div.haste{
-	color: #0ed59b;
+	color: var(--haste);
 }
 .stats_container > div.mastery{
-	color: #9256ff;
+	color: var(--mastery);
 }
 .stats_container > div.versatility{
-	color: #bfbfbf;
+	color: var(--versality);
 }
 @media screen and (max-width: 767px) {
 	.stats_container {

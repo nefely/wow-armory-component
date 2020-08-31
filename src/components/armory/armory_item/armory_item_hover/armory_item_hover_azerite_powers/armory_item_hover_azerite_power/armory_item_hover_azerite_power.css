@@ -3,6 +3,6 @@
 	font-size: 0.9em;
 }
 .armory_item_hover_azerite_power > div:nth-child(2) {
-	color: #00ff00;
+	color: var(--green);
 	padding-left: 7px;
 }

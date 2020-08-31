@@ -138,19 +138,19 @@
     border: 1px solid #0cf;
 }
 .LEGENDARY .armory_item_view_img {
-    border: 1px solid #ff8000;
+    border: 1px solid var(--legendary);
 }
 .EPIC .armory_item_view_img {
-    border: 1px solid #c600ff;
+    border: 1px solid var(--epic);
 }
 .RARE .armory_item_view_img {
-    border: 1px solid #0081ff;
+    border: 1px solid var(--rare);
 }
 .UNCOMMON .armory_item_view_img {
-    border: 1px solid #1eff00;
+    border: 1px solid var(--uncommon);
 }
 .COMMON .armory_item_view_img {
-    border: 1px solid #fff;
+    border: 1px solid var(--common);
 }
 .POOR .armory_item_view_img {
     border: 1px solid #9d9d9d;

@@ -29,9 +29,9 @@
 }
 .rosters_title {
 	color: var(--white);
-	background: rgb(149, 109, 209);
+	background: var(--corruption);
 	width: 200px;
-	border: 1px solid rgb(149, 109, 209);
+	border: 1px solid var(--corruption);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -54,9 +54,9 @@
 	height: 40px;
 	left: -50px;
 	top: 0;
-	background: rgb(149, 109, 209);
+	background: var(--corruption);
 	color: var(--white);
-	border: 1px solid rgb(149, 109, 209);
+	border: 1px solid var(--corruption);
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -6,7 +6,7 @@
 	top: 0%;
 	left: 50%;
 	transform: translateX(-50%);
-	background: rgb(15, 9, 27);
+	background: var(--dark_blue);
 	-webkit-transition: all 0.15s ease-in-out;
 	-o-transition: all 0.15s ease-in-out;
 	transition: all 0.15s ease-in-out;
@@ -24,7 +24,7 @@
 	z-index: 2;
 }
 .corruptions_hover_title {
-	color: rgb(149, 109, 209);
+	color: var(--corruption);
 	text-align: center;
 }
 @media screen and (max-width: 559px) {
