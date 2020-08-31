@@ -11,3 +11,20 @@
 	padding: 0 5px;
 	color: var(--white);
 }
+.armory_title_main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+.armory_title_main > *:not(:last-child) {
+	margin-right: 10px;
+}
+.armory_title_main .armory_title_name {
+}
+.armory_title_main p {
+	color: var(--white);
+}
+.armory_title_main .armory_title_achivement {
+	color: var(--warning-color-dark);
+}

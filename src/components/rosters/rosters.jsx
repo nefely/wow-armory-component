@@ -22,7 +22,6 @@ export default class Rosters extends Component {
 						data: result ,
 						guild_name: result.data.guild.name
 					});
-					console.log(this.state.data)
 					/*sort*/
 					var sortByName = result.data.members.slice(0)
 					sortByName.sort(function(a,b) {

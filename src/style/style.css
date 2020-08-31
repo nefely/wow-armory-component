@@ -342,8 +342,6 @@ button,a.button {
     align-items: center;
     padding: 0 20px;
 }
-button:hover,a.button:hover {
-}
 button > *,a.button > * {
     display: flex;
     justify-content: center;

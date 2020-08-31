@@ -23,6 +23,33 @@ body .form button {
 	height: calc(var(--vh, 1vh) * 100);
 	overflow:hidden;
 }
+.error_app {
+	height: calc(var(--vh, 1vh) * 100);
+	display: flex;
+	align-content: center;
+	flex-wrap: wrap;
+	max-width: 500px;
+	width: calc(100% - 20px);
+	margin: 0 auto;
+}
+.error_app h2 {
+	color: var(--white);
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;	
+}
+.error_app button {
+	width: 60px;
+	height: 60px;
+	font-size: 2em;
+	margin: 0 auto;
+	background: var(--danger-color);
+	color: var(--white);
+    border: 1px solid var(--danger-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 /* default media */
 /* xl */
 @media screen and (min-width: 1200px) {}

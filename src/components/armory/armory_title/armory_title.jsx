@@ -17,6 +17,7 @@ export default class Armory_Title extends Component {
 					this.setState({ 
 						characterInfo: result.data
 					});
+					console.log(result)
 			    }
 		    );
 		} catch (error) {}
@@ -26,7 +27,11 @@ export default class Armory_Title extends Component {
     	try {
     		return (
 				<div className="armory_title_info">
-					<h1 className={"armory_title_name " + this.state.characterInfo.character_class.name.toUpperCase()}>{this.state.characterInfo.name} ({this.state.characterInfo.equipped_item_level})</h1>
+					<div className="armory_title_main">
+						<p className="armory_title_item_level">({this.state.characterInfo.equipped_item_level})</p>
+						<h1 className={"armory_title_name " + this.state.characterInfo.character_class.name.toUpperCase()}>{this.state.characterInfo.name}</h1>
+						<p className="armory_title_achivement"><i className="fas fa-trophy"></i> {this.state.characterInfo.achievement_points}</p>
+					</div>
 					<div className="armory_title_class">
 						<h6>
 							<p>{this.state.characterInfo.race.name}</p>

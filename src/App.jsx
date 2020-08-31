@@ -9,11 +9,13 @@ import Myphics_Plus_Progress from "./components/myphics_plus_progress/myphics_pl
 import Raids_Progress from "./components/raids_progress/raids_progress.jsx";
 import Logout from "./components/logout/logout.jsx";
 
+// import {logOut} from "./store/store.jsx";
+
 export default class App extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        isLoaded: false
+        isLoaded: false,
       }
     }
 
@@ -22,10 +24,11 @@ export default class App extends Component {
         axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
             .then(result => {
               try {
+                store.userData.nameSlug = ""
                 store.userData.nameSlug = result.data.guild.name.toLowerCase().replace(/ /g, '-').replace(/'/g, '')
               } catch (error) {}
               this.setState({
-                isLoaded: true
+                isLoaded: true,
               });
             }
           );
@@ -34,7 +37,7 @@ export default class App extends Component {
 
     render() {
       if ( this.state.isLoaded === true ){
-        try{
+        try {
           return (
             <div className="app">
               <div className="workspace_container">
@@ -49,11 +52,31 @@ export default class App extends Component {
           );
         } catch (error) {
           return (
+            // <div className="app">
+            //   <div className="workspace_container">
+            //     <div className="error_app">
+            //       <h2>Wrong Realm Or Character Name</h2>
+            //       <button onClick={logOut}>
+            //         <i className="fas fa-undo"></i>
+            //       </button>
+            //     </div>
+            //   </div>
+            // </div>
             <div className="xs-hide" />
           );
         }
       } else {
         return (
+          // <div className="app">
+          //   <div className="workspace_container">
+          //     <div className="error_app">
+          //       <h2>Wrong Realm Or Character Name</h2>
+          //       <button onClick={logOut}>
+          //         <i className="fas fa-undo"></i>
+          //       </button>
+          //     </div>
+          //   </div>
+          // </div>
           <div className="xs-hide" />
         );
       }

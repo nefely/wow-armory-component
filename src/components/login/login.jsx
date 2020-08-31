@@ -3,7 +3,7 @@ import axios from 'axios';
 import store from '../../store/store.jsx';
 import SelectSearch from 'react-select-search';
 
-import {logIn , CheckItOut} from "../../store/store.jsx";
+import {logIn , Demo} from "../../store/store.jsx";
 
 import "./login.css";
 
@@ -48,11 +48,11 @@ export default class Login extends Component {
                                 <div className="form">
                                     <SelectSearch options={options} name="realmname" placeholder="Realm Name" search={true} />
                                     <input type="text" placeholder="Character Name" />
-                                    <button onClick={logIn}>Login</button>
+                                    <button onClick={logIn}>Log In</button>
                                 </div>
                             </div>
                             <div className="wrapper check">
-                                <button onClick={CheckItOut}>Check It Out</button>
+                                <button onClick={Demo}>Demo</button>
                             </div>
                         </div>
                     </div>

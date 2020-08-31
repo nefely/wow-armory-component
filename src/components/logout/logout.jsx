@@ -8,7 +8,7 @@ import "./logout.css";
 export default class Logout extends Component {
     render() {
         try {
-            return(
+            return (
                 <div id="logout">
                     <button onClick={logOut}>
                         <i className="fas fa-sign-out-alt" />

@@ -44,7 +44,7 @@ export const logIn = () => {
 	ReactDOM.unmountComponentAtNode(document.getElementById('root'));
 	ReactDOM.render(<App/>,document.getElementById('root'))
 }
-export const CheckItOut = () => {
+export const Demo = () => {
 	store.userData.realmSlug = "soulflayer";
 	store.userData.characterName = "анука";
 	store.appData.isLogged = true;
