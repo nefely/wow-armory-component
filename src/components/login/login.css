@@ -147,7 +147,7 @@
     height: 48px;
 }
 .select-search__option.is-selected {
-    background: rgb(149, 109, 209);;
+    background: rgb(149, 109, 209);
     color: #fff;
 }
 .select-search__option.is-highlighted,

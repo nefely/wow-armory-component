@@ -20,7 +20,9 @@ export default class Rosters extends Component {
 			    .then(result => {
 					this.setState({ 
 						data: result ,
+						guild_name: result.data.guild.name
 					});
+					console.log(this.state.data)
 					/*sort*/
 					var sortByName = result.data.members.slice(0)
 					sortByName.sort(function(a,b) {
@@ -58,7 +60,7 @@ export default class Rosters extends Component {
 								</button>
 							</div>
 							<div className="rosters_title">
-								<h4>Rosters</h4>
+								<h6>{this.state.guild_name}</h6>
 							</div>
 						</div>
 						<ul className="rosters_list">
