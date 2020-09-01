@@ -16,13 +16,13 @@
 .talents_container > .talent:nth-child(n+7){
     margin-bottom: 0;
 }
-.talent_visible {
+.talent_title {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 10px;
 }
-.talent_visible img {
+.talent_title img {
     width: 60px;
     height: 60px;
     background: var(--middle_blue);
@@ -30,7 +30,7 @@
     border-radius: 3px;
     border: 1px solid var(--light);
 }
-.talent_hover {
+.talent_description {
     color: var(--gold);
 }
 
@@ -48,7 +48,7 @@
     .talents_container > .talent:nth-child(n+7){
         margin-bottom: 0;
     }
-    .talent_visible img {
+    .talent_title img {
         width: 40px;
         height: 40px;
     }

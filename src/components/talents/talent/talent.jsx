@@ -25,11 +25,11 @@ export default class Talent extends Component {
     	try {
 	        return (
                 <div className="talent">
-                    <div className="talent_visible">
+                    <div className="talent_title">
                         <img src={this.state.img} alt="" />
                         <h3>{this.props.data.talent.name}</h3>
                    </div>
-                   <div className="talent_hover">
+                   <div className="talent_description">
                         <div className="spell_description">{this.props.data.spell_tooltip.description}</div>
                    </div>
                 </div>

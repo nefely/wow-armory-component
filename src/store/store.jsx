@@ -7,8 +7,8 @@ var store = {
 	userData: {
 		region: "eu",
 		locale: "en_GB",
-		realmSlug: "soulflayer".toLowerCase().replace(/ /g, '-').replace(/'/g, ''),
-		characterName: "анука".toLowerCase(),
+		realmSlug: "".toLowerCase().replace(/ /g, '-').replace(/'/g, ''),
+		characterName: "".toLowerCase(),
 	},
 	gameData: {
 		seasonNumber: 4,
@@ -19,7 +19,7 @@ var store = {
 		clientSecret: "bpjGN3KqGWmbibk4Fn74CDsFP2YQOdqo",
 	},
 	appData: {
-		isLogged: true,
+		isLogged: false,
 	},
 }
 export default window.store = store;
