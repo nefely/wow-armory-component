@@ -15,16 +15,23 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
 }
 .armory_title_main > *:not(:last-child) {
 	margin-right: 10px;
 }
-.armory_title_main .armory_title_name {
-}
 .armory_title_main p {
 	color: var(--white);
+	color: var(--gold);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.armory_title_main p svg {
+	fill: var(--gold);
+	width: 15px;
+	height: 15px;
+	margin: 0 5px;
 }
 .armory_title_main .armory_title_achivement {
-	color: var(--legendary);
 }

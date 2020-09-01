@@ -11,6 +11,7 @@
 }
 .raid_progress_line_title {
 	width: 70px;
+	color: var(--gold);
 }
 .raid_progress_line_container {
 	width: calc(100% - 70px);
