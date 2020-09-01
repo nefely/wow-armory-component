@@ -2,7 +2,7 @@
 	width: calc(100% - 10px);
 	border-radius: 3px;
 	border: 2px solid var(--light);
-	background: rgb(35, 29, 47);
+	background: var(--middle_blue);
 	color: var(--w);
 	min-height: 200px;
 	margin: 0 5px;
@@ -10,7 +10,7 @@
 .raid_progress_image {
 	width: 100%;
 	height: 200px;
-	background: var(--dark_blue);
+	background: var(--middle_blue);
 }
 .raid_progress_image img {
 	width: 100%;
