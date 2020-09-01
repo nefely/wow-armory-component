@@ -78,9 +78,10 @@
 	color: var(--white);
 }
 .rosters_list {
-	border: 1px solid var(--light);
-	height: calc(100% - 70px);
 	width: 200px;
+	height: calc(100% - 70px);
+	background: var(--dark_blue);
+	border: 1px solid var(--light);
 	overflow-y: scroll;
 	margin: 10px 10px 0 10px; 
 	border-radius: 3px;
@@ -93,5 +94,4 @@
 #rosters.isVisible .rosters_list {
 	opacity: 1;
 	visibility: visible;
-
 }
