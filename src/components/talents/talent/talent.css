@@ -15,6 +15,7 @@
 }
 .talents_container > .talent:nth-child(n+7){
     margin-bottom: 0;
+    margin-right: 0;
 }
 .talent_title {
     display: flex;
@@ -47,6 +48,7 @@
     }
     .talents_container > .talent:nth-child(n+7){
         margin-bottom: 0;
+        margin-right: 0;
     }
     .talent_title img {
         width: 40px;
