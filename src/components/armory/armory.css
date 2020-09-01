@@ -96,7 +96,7 @@
     .armory_character_background img {
         object-position: center calc(50% - 50px);
         object-fit: cover;
-        height: 100%;
+        height: calc(100% + 100px);
         width: auto;
     }
     .armory_items_container_left ul > li,
