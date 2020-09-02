@@ -30,17 +30,17 @@
     color: var(--common);
 }
 .armory_item_hover_azerite_essence.LEGENDARY > img {
-    border: 2px solid var(--legendary);
+    border: 1px solid var(--legendary);
 }
 .armory_item_hover_azerite_essence.EPIC > img {
-    border: 2px solid var(--epic);
+    border: 1px solid var(--epic);
 }
 .armory_item_hover_azerite_essence.RARE > img {
-    border: 2px solid var(--rare);
+    border: 1px solid var(--rare);
 }
 .armory_item_hover_azerite_essence.UNCOMMON > img {
-    border: 2px solid var(--uncommon);
+    border: 1px solid var(--uncommon);
 }
 .armory_item_hover_azerite_essence.COMMON > img {
-    border: 2px solid var(--common);
+    border: 1px solid var(--common);
 }

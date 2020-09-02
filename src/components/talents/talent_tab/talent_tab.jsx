@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import store from './../../../store/store.jsx';
+import store from '../../../store/store.jsx';
 
-import "./talent.css";
+import "./talent_tab.css";
 
-export default class Talent extends Component {
+export default class Talent_Tab extends Component {
 	constructor(props) {
 	    super(props);
 		this.state = {}
@@ -24,14 +24,8 @@ export default class Talent extends Component {
     render() {
     	try {
 	        return (
-                <div className="talent">
-                    <div className="talent_title">
-                        <img src={this.state.img} alt="" />
-                        <h3>{this.props.data.talent.name}</h3>
-                   </div>
-                   <div className="talent_description">
-                        <div className="spell_description">{this.props.data.spell_tooltip.description}</div>
-                   </div>
+                <div className={ this.props.number === this.props.activeTab ? "talent_tab active" : "talent_tab" } onClick={ (newNumber) => this.props.triggerTab(this.props.number) }>
+                    <img src={this.state.img} alt="" />
                 </div>
 	        )
     	} catch (error) {

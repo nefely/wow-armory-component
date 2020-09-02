@@ -7,9 +7,23 @@
 	margin-bottom: 20px;
 	text-align: center;
 }
-.talents_container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
+.talents_tab_container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.talents_description_container {
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+	background: var(--middle_blue);
+	border: 1px solid var(--light);
+	height: 200px;
+}
+
+@media screen and (max-width: 767px) {
+	.talents_tab_container {
+		justify-content: space-between;
+	}
 }

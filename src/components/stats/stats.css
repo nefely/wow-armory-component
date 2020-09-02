@@ -14,7 +14,7 @@
 	flex-wrap: wrap;
 	/* background: var(--dark_blue);
 	border-radius: 3px;
-	border: 2px solid var(--light); */
+	border: 1px solid var(--light); */
 }
 .stats_container > div {
 	width: calc( (100% - 30px) / 4);
@@ -26,7 +26,7 @@
 	height: 200px;
 	position: relative;
 	border-radius: 3px;
-	border: 2px solid var(--light);
+	border: 1px solid var(--light);
 }
 .stats_container > div.crit:after{
 	content: "";

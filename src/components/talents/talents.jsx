@@ -4,12 +4,15 @@ import store from './../../store/store.jsx';
 
 import "./talents.css";
 
-import Talent from "./talent/talent.jsx";
+import Talent_Description from "./talent_desription/talent_desription.jsx";
+import Talent_Tab from "./talent_tab/talent_tab.jsx";
 
 export default class Talents extends Component {
 	constructor(props) {
 	    super(props);
-		this.state = {}
+		this.state = {
+			activeTab: 0,
+		}
 	}
 
 	UNSAFE_componentWillMount() {
@@ -22,7 +25,16 @@ export default class Talents extends Component {
                     console.log(this.state.data)
                 })
 		} catch (error) {}
-  	}
+	}
+		
+	// triggerTab = function(newNumber) {
+	// 	console.log("newNUMBER - " , newNumber)
+	// 	console.log(this);
+
+	// 	this.setState({
+	// 		activeTab: newNumber,
+	// 	})
+	// }
 
     render() {
     	try {
@@ -32,10 +44,17 @@ export default class Talents extends Component {
 						<div className="talents_title">
 							<h2>Talents</h2>
 						</div>
-						<div className="talents_container">
+						<div className="talents_tab_container">
 							{this.state.data.map((data,i) => {
                                 return (
-                                    <Talent data={data} key={i} />
+                                    <Talent_Tab data={data} key={i} number={i} activeTab={this.state.activeTab} triggerTab={ (newNumber) => this.setState({activeTab: newNumber}) }/>
+                                )
+                            })}
+						</div>
+						<div className="talents_description_container">
+							{this.state.data.map((data,i) => {
+                                return (
+                                    <Talent_Description data={data} key={i} number={i} activeTab={this.state.activeTab} />
                                 )
                             })}
 						</div>

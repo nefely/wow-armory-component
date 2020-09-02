@@ -1,7 +1,7 @@
 .raid_progress {
 	width: calc(100% - 10px);
 	border-radius: 3px;
-	border: 2px solid var(--light);
+	border: 1px solid var(--light);
 	background: var(--middle_blue);
 	color: var(--w);
 	min-height: 200px;
