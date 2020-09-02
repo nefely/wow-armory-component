@@ -22,8 +22,10 @@
 	height: 200px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 990px) {
 	.talents_tab_container {
 		justify-content: space-between;
+		max-width: 340px;
+		margin: 0 auto;
 	}
 }
