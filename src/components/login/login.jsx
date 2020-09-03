@@ -17,7 +17,7 @@ export default class Login extends Component {
 
     UNSAFE_componentWillMount() {
         try {
-          axios.get("https://"+store.userData.region+".api.blizzard.com/data/wow/realm/index?namespace="+store.userData.nameSpaceDynamic+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
+            axios.get("https://"+store.userData.region+".api.blizzard.com/data/wow/realm/index?namespace="+store.userData.nameSpaceDynamic+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
               .then(result => {
                 this.setState({
                     realms: result.data.realms,
@@ -38,7 +38,12 @@ export default class Login extends Component {
                 }
                 realmsArray.push(realmObject)
             }
-            const options = realmsArray
+            const options_realm = realmsArray;
+            const options_region = [
+                {name: 'EU', value: 'EU'},
+                {name: 'KR', value: 'KR'},
+                {name: 'US', value: 'US'},
+            ];
             try {
                 return(
                     <div id="login">
@@ -46,8 +51,9 @@ export default class Login extends Component {
                             <div className="wrapper">
                                 <h2>Choose You Character</h2>
                                 <div className="form">
-                                    <SelectSearch options={options} name="realmname" placeholder="Realm Name" search={true} />
-                                    <input type="text" placeholder="Character Name" />
+                                    <SelectSearch options={options_region} name="regionmname" placeholder="Region" search={true} />
+                                    <SelectSearch options={options_realm} name="realmname" placeholder="Realm" search={true} />
+                                    <input type="text" placeholder="Character" />
                                     <button onClick={logIn}>Log In</button>
                                 </div>
                             </div>
@@ -67,6 +73,5 @@ export default class Login extends Component {
                 <div className="xs-hide" />
             )
         }
-        
     }
 }

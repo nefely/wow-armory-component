@@ -29,8 +29,11 @@ export const newCharacterRender = (e) => {
 	ReactDOM.unmountComponentAtNode(document.getElementById('root'));
 	ReactDOM.render(<App/>,document.getElementById('root'))
 }
-
 export const logOut = () => {
+	store.userData.region="eu";
+	store.userData.nameSpace = "profile-eu";
+	store.userData.nameSpaceStatic = "static-eu";
+	store.userData.nameSpaceDynamic = "dynamic-eu";
 	store.userData.realmSlug = "";
 	store.userData.characterName = "";
 	store.appData.isLogged = false;
@@ -38,13 +41,25 @@ export const logOut = () => {
 	ReactDOM.render(<Login/>,document.getElementById('root'))
 }
 export const logIn = () => {
-	store.userData.realmSlug = document.getElementsByTagName("input")[0].value.toLowerCase().replace(/ /g, '-').replace(/'/g, '');
-	store.userData.characterName = document.getElementsByTagName("input")[1].value.toLowerCase();
+	store.userData.region="";
+	store.userData.nameSpace = "";
+	store.userData.nameSpaceStatic = "";
+	store.userData.nameSpaceDynamic = "";
+	store.userData.region = document.getElementsByTagName("input")[0].value.toLowerCase();
+	store.userData.nameSpace = "profile-" + store.userData.region;
+	store.userData.nameSpaceStatic = "static-" + store.userData.region;
+	store.userData.nameSpaceDynamic = "dynamic-" + store.userData.region;
+	store.userData.realmSlug = document.getElementsByTagName("input")[1].value.toLowerCase().replace(/ /g, '-').replace(/'/g, '');
+	store.userData.characterName = document.getElementsByTagName("input")[2].value.toLowerCase();
 	store.appData.isLogged = true;
 	ReactDOM.unmountComponentAtNode(document.getElementById('root'));
 	ReactDOM.render(<App/>,document.getElementById('root'))
 }
 export const Demo = () => {
+	store.userData.region="eu";
+	store.userData.nameSpace = "profile-eu";
+	store.userData.nameSpaceStatic = "static-eu";
+	store.userData.nameSpaceDynamic = "dynamic-eu";
 	store.userData.realmSlug = "soulflayer";
 	store.userData.characterName = "анука";
 	store.appData.isLogged = true;

@@ -22,20 +22,10 @@ export default class Talents extends Component {
                     this.setState({ 
 						data: result.data.specializations.filter(item => item.specialization.name === result.data.active_specialization.name)[0].talents
                     });
-                    console.log(this.state.data)
                 })
 		} catch (error) {}
 	}
 		
-	// triggerTab = function(newNumber) {
-	// 	console.log("newNUMBER - " , newNumber)
-	// 	console.log(this);
-
-	// 	this.setState({
-	// 		activeTab: newNumber,
-	// 	})
-	// }
-
     render() {
     	try {
 	        return (
