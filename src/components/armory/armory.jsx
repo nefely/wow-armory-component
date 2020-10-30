@@ -6,7 +6,6 @@ import "./armory.css";
 
 import Armory_Item from "./armory_item/armory_item.jsx";
 import Armory_Title from "./armory_title/armory_title.jsx";
-import Corruptions from "./corruptions/corruptions.jsx";
 
 export default class Armory extends Component {
 	constructor(props) {
@@ -27,9 +26,15 @@ export default class Armory extends Component {
 	    try {
 	    	axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"/character-media?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
 			   .then(img => {
-					this.setState({ 
-						characterImg: img.data.render_url ,
-					});
+					try {
+						this.setState({ 
+							characterImg: img.data.assets[2].value ,
+						});	
+					} catch (error) {
+						this.setState({ 
+							characterImg: img.data.render_url ,
+						});
+					}
 			    }
 		    )
 	    } catch (error) {}
@@ -73,9 +78,7 @@ export default class Armory extends Component {
 									</li>
 								</ul>
 							</div> {/*armory_items_container_left*/}
-							<div className="armory_items_container_center xs-fce">
-								<Corruptions data={this.state.data.data.equipped_items}/>
-							</div>
+							<div className="armory_items_container_center xs-fce" />
 							<div className="armory_items_container_right">
 								<ul>
 									<li>

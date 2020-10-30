@@ -1,6 +1,6 @@
 {
-  "short_name": "WOW GUILD",
-  "name": "WOW GUILD",
+  "short_name": "WoW Armory",
+  "name": "WoW Armory",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://nefely.github.io/wow-guild.html",
+  "start_url": "https://nefely.github.io/wow-armory",
   "display": "fullscreen",
   "theme_color": "rgb(15, 9, 27)",
   "background_color": "rgb(15, 9, 27)"
