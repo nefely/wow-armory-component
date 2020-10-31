@@ -20,8 +20,7 @@ export default class Myphics_Plus_Progress extends Component {
 			axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"/mythic-keystone-profile/season/"+store.gameData.seasonNumber+"?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
 			    .then(result => {
 					this.setState({ 
-						// data: result.data.best_runs.filter(item => item.is_completed_within_time === true) ,
-						data: result.data.best_runs,
+						data: result.data.best_runs.filter(item => item.is_completed_within_time === true) ,
 					});
 			    }
 		    );
