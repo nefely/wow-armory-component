@@ -1,0 +1,72 @@
+#covenant {
+	width: 100%;
+	padding: 40px 0;
+}
+.covenant_title {
+	color: var(--gold);
+	margin-bottom: 20px;
+	text-align: center;
+}
+.covenant_title h2 {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+.covenant_title h2 > span {
+	display: block;
+	width: calc(50% - 40px);
+}
+.covenant_title h2 > span:nth-child(1) {
+	text-align: right;
+}
+.covenant_title h2 > span:nth-child(3) {
+	text-align: left;
+}
+.covenant_title p {
+	color: var(--w);
+	font-size: 1rem;;
+}
+.covenant_title_image {
+	width: 60px;
+	height: 60px;
+	background: #f00;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.covenant_title_image[data-chosen-covenant="Kyrian"] {
+	background: url("../../../src/img/Kyrian.png");
+}
+.covenant_title_image[data-chosen-covenant="Venthyr"] {
+	background: url("../../../src/img/Venthyr.png");
+}
+.covenant_title_image[data-chosen-covenant="Night Fae"] {
+	background: url("../../../src/img/Night_Fae.png");
+}
+.covenant_title_image[data-chosen-covenant="Necrolord"] {
+	background: url("../../../src/img/Necrolord.png");
+}
+.covenant_tab_container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.covenant_description_container {
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+	background: var(--middle_blue);
+	border: 2px solid var(--light);
+	min-height: 200px;
+}
+
+@media screen and (max-width: 990px) {
+	.covenant_tab_container {
+		max-width: 340px;
+		margin: 0 auto;
+	}
+}

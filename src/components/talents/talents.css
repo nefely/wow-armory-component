@@ -18,7 +18,7 @@
 	width: 100%;
 	margin-top: 10px;
 	background: var(--middle_blue);
-	border: 1px solid var(--light);
+	border: 2px solid var(--light);
 	height: 200px;
 }
 

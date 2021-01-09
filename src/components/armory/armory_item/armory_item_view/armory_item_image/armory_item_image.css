@@ -95,7 +95,7 @@
 	min-width: 60px;
 	min-height: 60px;
 	margin-right: 20px;
-	border: 1px solid #333;
+	border: 2px solid #333;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -132,28 +132,28 @@
 }
 .ARTIFACT .armory_item_view_img,
 .AZERITE .armory_item_view_img {
-    border: 1px solid #e5cc80;
+    border: 2px solid #e5cc80;
 }
 .HEIRLOOM .armory_item_view_img {
-    border: 1px solid #0cf;
+    border: 2px solid #0cf;
 }
 .LEGENDARY .armory_item_view_img {
-    border: 1px solid var(--legendary);
+    border: 2px solid var(--legendary);
 }
 .EPIC .armory_item_view_img {
-    border: 1px solid var(--epic);
+    border: 2px solid var(--epic);
 }
 .RARE .armory_item_view_img {
-    border: 1px solid var(--rare);
+    border: 2px solid var(--rare);
 }
 .UNCOMMON .armory_item_view_img {
-    border: 1px solid var(--uncommon);
+    border: 2px solid var(--uncommon);
 }
 .COMMON .armory_item_view_img {
-    border: 1px solid var(--common);
+    border: 2px solid var(--common);
 }
 .POOR .armory_item_view_img {
-    border: 1px solid #9d9d9d;
+    border: 2px solid #9d9d9d;
 }
 
 @media screen and (max-width: 990px) {

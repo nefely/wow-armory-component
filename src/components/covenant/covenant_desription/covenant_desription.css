@@ -1,0 +1,25 @@
+.covenant_description {
+    width: calc(100% - 40px);
+    max-width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    opacity: 0;
+}
+.covenant_description.active {
+    opacity: 1;
+}
+.covenant_description > .covenant_title {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+.covenant_description > .covenant_text {
+    color: var(--gold);
+}
+@media screen and (max-width: 767px) {
+    .covenant_description {
+        width: calc(100% - 20px);
+    }
+}

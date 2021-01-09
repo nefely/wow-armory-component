@@ -10,8 +10,20 @@ export default class Rosters extends Component {
 	constructor(props) {
 	    super(props);
 		this.state = {
-	    	isVisible: false,
-	  	}
+			isVisible: false,
+			inputSearchValue: "",
+		}
+		this.handleInputSearch = this.handleInputSearch.bind(this);
+		this.handleInputSearchClean = this.handleInputSearchClean.bind(this);
+	}
+
+	handleInputSearch(event) {
+		this.setState({inputSearchValue: event.target.value});
+	}
+	handleInputSearchClean() {
+		this.setState({inputSearchValue: ""});
+		document.getElementById("roster_input_search").value = "";
+		document.getElementById("roster_input_search").focus();
 	}
 
 	UNSAFE_componentWillMount() {
@@ -39,7 +51,7 @@ export default class Rosters extends Component {
 			    }
 		    );
 		} catch (error) {}
-  	}
+	}
 
     render() {
     	const toggleRosterList = () => {
@@ -47,7 +59,7 @@ export default class Rosters extends Component {
     			isVisible: !this.state.isVisible,
     		})
     	}
-
+		const InputSearchButton = this.state.inputSearchValue == "" ? <i className="fas fa-search" /> : <i className="fas fa-times clean" onClick={this.handleInputSearchClean}/>
     	try {
 	        return (
 				<div id="rosters" className={ this.state.isVisible ? "isVisible" : ""}>
@@ -62,9 +74,13 @@ export default class Rosters extends Component {
 								<h6>{this.state.guild_name}</h6>
 							</div>
 						</div>
+						<div className="roster_search xs-fcc">
+							<input type="text" placeholder="Character Name" value={this.state.handleInputSearch} onChange={this.handleInputSearch} id="roster_input_search"/>
+							{InputSearchButton}
+						</div>
 						<ul className="rosters_list">
 							{this.state.data.map((data, i) => 
-	                            <Roster key={i} data={data} />
+	                            <Roster key={i} data={data} inputSearchValue={this.state.inputSearchValue}/>
 	                        )}
 						</ul>
 					</div>

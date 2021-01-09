@@ -36,7 +36,7 @@
 #login .form > button , #login .workspace_container .wrapper.check > button {
 	width: 100%;
 	background: var(--corruption);
-	border: 1px solid var(--corruption);
+	border: 2px solid var(--corruption);
 	height: 40px;
 	margin-bottom: 0px;
     color: var(--white);
@@ -45,7 +45,7 @@
 #login .form input,
 #login .form select {
 	width: 100%;
-	border: 1px solid var(--light);
+	border: 2px solid var(--light);
 	height: 40px;
 	margin-bottom: 10px;
 	color: var(--black) !important;
@@ -102,7 +102,7 @@
     width: 100%;
     padding: 0 16px;
     background: var(--common);
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     box-shadow: 0 .0625rem .125rem rgba(0, 0, 0, 0.15);
     border-radius: 3px;
     outline: none;
@@ -129,7 +129,7 @@
     list-style: none;
 }
 .select-search__row:not(:first-child) {
-    border-top: 1px solid #eee;
+    border-top: 2px solid #eee;
 }
 .select-search__option {
     display: block;
@@ -180,8 +180,8 @@
 }
 .select-search:not(.is-loading):not(.select-search--multiple) .select-search__value::after {
     transform: rotate(45deg);
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
     pointer-events: none;
 }
 .select-search--multiple .select-search__input {
@@ -210,6 +210,6 @@
     position: relative;
     overflow: auto;
     max-height: 260px;
-    border-top: 1px solid #eee;
+    border-top: 2px solid #eee;
     border-radius: 0 0 3px 3px;
 }

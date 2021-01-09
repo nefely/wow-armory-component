@@ -18,7 +18,7 @@
 	background: var(--black);
 	height: 30px;
 	border-radius: 3px;
-	border: 1px solid var(--light);
+	border: 2px solid var(--light);
 	overflow: hidden;
 	position: relative;
 }
@@ -34,7 +34,6 @@
 	width: 20%;
 	height: 28px;
 	background: var(--corruption);
-	border-radius: 3px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -64,7 +63,7 @@
 	opacity: 1;
 	margin-top: 5px;
 	padding: 5px;
-	border: 1px solid var(--light);
+	border: 2px solid var(--light);
 }
 @media screen and (max-width: 767px) {
 	.raid_progress_line_hover_container {

@@ -4,14 +4,14 @@
     cursor: pointer;
 }
 .talents_tab_container > .talent_tab > img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin-bottom: -4px;
     border-radius: 3px;
-    border: 1px solid var(--light);
+    border: 2px solid var(--light);
 }
 .talents_tab_container > .talent_tab.active > img {
-    border: 1px solid var(--gold);
+    border: 2px solid var(--gold);
 }
 @media screen and (max-width: 990px) {
     .talents_tab_container > .talent_tab {
@@ -22,19 +22,19 @@
         margin-right: 0;
     }
     .talents_tab_container > .talent_tab > img {
-        width: 40px;
-        height: 40px;
-        margin-bottom: -4px;
-        border-radius: 3px;
-        border: 1px solid var(--light);
-    }
-}
-@media screen and (max-width: 370px) {
-    .talents_tab_container > .talent_tab > img {
         width: 35px;
         height: 35px;
         margin-bottom: -4px;
         border-radius: 3px;
-        border: 1px solid var(--light);
+        border: 2px solid var(--light);
+    }
+}
+@media screen and (max-width: 370px) {
+    .talents_tab_container > .talent_tab > img {
+        width: 30px;
+        height: 30px;
+        margin-bottom: -4px;
+        border-radius: 3px;
+        border: 2px solid var(--light);
     }
 }

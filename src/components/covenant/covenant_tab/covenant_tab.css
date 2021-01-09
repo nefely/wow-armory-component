@@ -1,0 +1,74 @@
+.covenant_tab_container > .covenant_tab {
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.covenant_tab_container > .covenant_tab > img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: -4px;
+    border-radius: 50%;
+    border: 2px solid var(--light);
+}
+.covenant_tab_container > .covenant_tab.active > img {
+    border: 2px solid var(--gold);
+}
+.covenant_tab_container > .covenant_tab > div {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    z-index: 2;
+    right: 1px;
+    bottom: 0px;
+    border-radius: 50%;
+}
+.covenant_tab_container > .covenant_tab > div[data-cocket-type="POTENCY"] ,
+.covenant_tab_container > .covenant_tab > div[data-cocket-type="ENDURANCE"] ,
+.covenant_tab_container > .covenant_tab > div[data-cocket-type="FINESSE"] {
+    background: var(--light);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.covenant_tab_container > .covenant_tab.active > div[data-cocket-type="POTENCY"] ,
+.covenant_tab_container > .covenant_tab.active > div[data-cocket-type="ENDURANCE"] ,
+.covenant_tab_container > .covenant_tab.active > div[data-cocket-type="FINESSE"] {
+    background: var(--gold);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.covenant_tab_container > .covenant_tab > div[data-cocket-type="POTENCY"] {
+    background-image: url("../../../img/swords.png") !important;
+}
+.covenant_tab_container > .covenant_tab > div[data-cocket-type="ENDURANCE"] {
+    background-image: url("../../../img/shield.png") !important;
+}
+.covenant_tab_container > .covenant_tab > div[data-cocket-type="FINESSE"] {
+    background-image: url("../../../img/flash.png") !important;
+}
+
+@media screen and (max-width: 990px) {
+    .covenant_tab_container > .covenant_tab {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+    .covenant_tab_container > .covenant_tab:last-child {
+        margin-right: 0;
+    }
+    .covenant_tab_container > .covenant_tab > img {
+        width: 35px;
+        height: 35px;
+    }
+    .covenant_tab_container > .covenant_tab > div {
+        width: 18px;
+        height: 18px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .covenant_tab_container > .covenant_tab > img {
+        width: 30px;
+        height: 30px;
+    }
+}

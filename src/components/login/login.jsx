@@ -11,7 +11,9 @@ export default class Login extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        isLoaded: false
+        isLoaded: false,
+        defaultRegion: "EU",
+        defaultRealm: "soulflayer",
       }
     }
 
@@ -51,9 +53,23 @@ export default class Login extends Component {
                             <div className="wrapper">
                                 <h2>Choose You Character</h2>
                                 <div className="form">
-                                    <SelectSearch options={options_region} name="regionmname" placeholder="Region" search={true} />
-                                    <SelectSearch options={options_realm} name="realmname" placeholder="Realm" search={true} />
-                                    <input type="text" placeholder="Character" />
+                                    <SelectSearch 
+                                        options={options_region} 
+                                        name="regionmname" 
+                                        placeholder="Region" 
+                                        search={true} 
+                                        value={this.state.defaultRegion}
+                                        defaultValue={this.state.defaultRegion}
+                                    />
+                                    <SelectSearch 
+                                        options={options_realm} 
+                                        name="realmname" 
+                                        placeholder="Realm" 
+                                        search={true} 
+                                        value={this.state.defaultRealm} 
+                                        defaultValue={this.state.defaultRealm}
+                                    />
+                                    <input type="text" placeholder="Character"/>
                                     <button onClick={logIn}>Log In</button>
                                 </div>
                             </div>

@@ -15,7 +15,7 @@
 	visibility: hidden;
 	border-radius: 3px;
 	z-index: 1;
-	border: 1px solid var(--light);
+	border: 2px solid var(--light);
 	padding: 10px 20px 20px 20px;
 }
 .armory_item:hover .armory_item_hover {

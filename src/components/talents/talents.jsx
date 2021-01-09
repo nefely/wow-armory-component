@@ -21,7 +21,7 @@ export default class Talents extends Component {
 			    .then(result => {
                     this.setState({ 
 						data: result.data.specializations.filter(item => item.specialization.name === result.data.active_specialization.name)[0].talents
-                    });
+					});
                 })
 		} catch (error) {}
 	}

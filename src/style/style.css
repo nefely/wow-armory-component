@@ -332,7 +332,7 @@ button,a,input,textarea,input::placeholder,textarea::placeholder {
     font-weight: var(--normal);
     font-size: 1em;
     line-height: 1.2em;
-    color: var(--chrome);
+    color: var(--light);
     border: none;
     border-radius: 3px;
     background: none;
@@ -344,14 +344,14 @@ button,a,input,textarea,input::placeholder,textarea::placeholder {
     transition: all 0.3s ease-in-out;
 }
 input,textarea {
-    border: 1px solid var(--silver);
+    border: 2px solid var(--light);
     padding: 5px 10px;
 }
 input:focus,textarea:focus {
-    border: 1px solid var(--chrome);
+    border: 2px solid var(--light);
 }
 input::placeholder,textarea::placeholder {
-    color: var(--silver);
+    color: var(--light);
 }
 button,a.button {
     border: 0;

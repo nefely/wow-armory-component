@@ -21,19 +21,19 @@
 	background-position: center;
 }
 .myphic_plus_progress.LEGENDARY .myphic_plus_progress_overlay {
-    border: 1px solid var(--legendary);
+    border: 2px solid var(--legendary);
 }
 .myphic_plus_progress.EPIC .myphic_plus_progress_overlay {
-    border: 1px solid var(--epic);
+    border: 2px solid var(--epic);
 }
 .myphic_plus_progress.RARE .myphic_plus_progress_overlay {
-    border: 1px solid var(--rare);
+    border: 2px solid var(--rare);
 }
 .myphic_plus_progress.UNCOMMON .myphic_plus_progress_overlay {
-    border: 1px solid var(--uncommon);
+    border: 2px solid var(--uncommon);
 }
 .myphic_plus_progress.COMMON .myphic_plus_progress_overlay{
-    border: 1px solid var(--common);
+    border: 2px solid var(--common);
 }
 .myphic_plus_progress_container h3 {
 	width: 100px;

@@ -3,6 +3,7 @@ import axios from 'axios';
 import store from './store/store.jsx';
 
 import Rosters from "./components/rosters/rosters.jsx";
+import Covenant from "./components/covenant/covenant.jsx";
 import Armory from "./components/armory/armory.jsx";
 import Stats from "./components/stats/stats.jsx";
 import Talents from "./components/talents/talents.jsx";
@@ -47,6 +48,7 @@ export default class App extends Component {
             <div className="app">
               <div className="workspace_container">
                 <Armory />
+                <Covenant />
                 <Stats /> 
                 <Talents /> 
                 <Myphics_Plus_Progress />
