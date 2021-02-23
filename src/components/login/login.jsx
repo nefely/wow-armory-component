@@ -52,7 +52,7 @@ export default class Login extends Component {
                         <div className="workspace_container">
                             <div className="wrapper">
                                 <h2>Choose You Character</h2>
-                                <div className="form">
+                                <form className="form">
                                     <SelectSearch 
                                         options={options_region} 
                                         name="regionmname" 
@@ -71,7 +71,7 @@ export default class Login extends Component {
                                     />
                                     <input type="text" placeholder="Character"/>
                                     <button onClick={logIn}>Log In</button>
-                                </div>
+                                </form>
                             </div>
                             <div className="wrapper check">
                                 <button onClick={Demo}>Demo</button>

@@ -21,9 +21,7 @@ export default class Roster extends Component {
 						data: result ,
 					});
 				})
-		} catch (error) {
-			console.log("error")
-		}
+		} catch (error) {}
   	}
 	render() {
     	try {

@@ -3,6 +3,7 @@ import axios from 'axios';
 import store from './store/store.jsx';
 
 import Rosters from "./components/rosters/rosters.jsx";
+import Rio from "./components/rio/rio.jsx";
 import Covenant from "./components/covenant/covenant.jsx";
 import Armory from "./components/armory/armory.jsx";
 import Stats from "./components/stats/stats.jsx";
@@ -48,6 +49,7 @@ export default class App extends Component {
             <div className="app">
               <div className="workspace_container">
                 <Armory />
+                <Rio />
                 <Covenant />
                 <Stats /> 
                 <Talents /> 

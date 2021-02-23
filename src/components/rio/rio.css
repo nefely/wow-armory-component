@@ -1,0 +1,103 @@
+#rio {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0%;
+    z-index: 100;
+}
+#rio .wrapper {
+    max-width: 410px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    background: var(--middle_blue);
+    border: 2px solid var(--light);
+    border-bottom: 0;
+}
+.rio_title {
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.rio_title a {
+    color: var(--light);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.rio_title a:hover {
+    color: var(--gold);
+}
+.rio_title img {
+    max-width: 100%;
+    max-height: 30px;
+}
+#rio .wrapper:hover .rio_container{
+    height: auto;
+}
+.rio_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 0;
+    overflow: hidden;
+}
+.rio_role_block {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    width:120px;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--dark_blue);;
+    border-radius: 3px;
+}
+.rio_role_block_tank .rio_role_block_icon {
+    background-image: url("../../../src/img/role_tank.png");
+}
+.rio_role_block_healer .rio_role_block_icon {
+    background-image: url("../../../src/img/role_healer.png");
+}
+.rio_role_block_damage .rio_role_block_icon {
+    background-image: url("../../../src/img/role_dps.png");
+}
+.rio_role_block[data-point="0"] {
+    display: none;
+}
+.rio_role_block_icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    background-size: 100% 100%;
+    text-align: center;
+}
+.rio_role_block_point {
+    color: var(--w);
+    width: 100%;
+}
+@media screen and (max-width: 767px){
+    #rio .wrapper {
+        max-width: calc(100% - 20px);
+    }
+    .rio_role_block {
+        width:100px;
+    }
+    .rio_role_block_icon {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+    }
+}

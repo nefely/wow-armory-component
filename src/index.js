@@ -21,14 +21,10 @@ window.addEventListener("resize", windowResize);
 store.userData.nameSpace = "profile-" + store.userData.region;
 store.userData.nameSpaceStatic = "static-" + store.userData.region;
 store.userData.nameSpaceDynamic = "dynamic-" + store.userData.region;
+
 //get access token data
-axios.get("https://us.battle.net/oauth/token", {
-	params: {
-		client_id: store.accessData.clientID,
-		client_secret: store.accessData.clientSecret,
-		grant_type: "client_credentials",
-	}
-}).then(result => {
+axios.post("https://us.battle.net/oauth/token?grant_type=client_credentials&client_id="+store.accessData.clientID+"&client_secret="+store.accessData.clientSecret, {})
+.then(result => {
 	store.userData.accessToken = result.data.access_token;
 	if (store.appData.isLogged === true) {
 		ReactDOM.render(<App/>,document.getElementById('root'));
@@ -37,3 +33,30 @@ axios.get("https://us.battle.net/oauth/token", {
 	}
 	serviceWorker.register();
 });
+
+// OLD
+//get access token data
+// axios.get("https://us.battle.net/oauth/token", {
+// 	params: {
+// 		client_id: store.accessData.clientID,
+// 		client_secret: store.accessData.clientSecret,
+// 		grant_type: "client_credentials",
+// 	}
+// }).then(result => {
+// 	store.userData.accessToken = result.data.access_token;
+// 	if (store.appData.isLogged === true) {
+// 		ReactDOM.render(<App/>,document.getElementById('root'));
+// 	} else {
+// 		ReactDOM.render(<Login/>,document.getElementById('root'));
+// 	}
+// 	serviceWorker.register();
+// });
+
+// MANUAL
+// store.userData.accessToken = "USJlqtOvRQ56YZ7S8I6TNzngfbCwsa92Oy";
+// if (store.appData.isLogged === true) {
+// 	ReactDOM.render(<App/>,document.getElementById('root'));
+// } else {
+// 	ReactDOM.render(<Login/>,document.getElementById('root'));
+// }
+// serviceWorker.register();

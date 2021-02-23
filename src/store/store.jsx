@@ -16,7 +16,7 @@ var store = {
 	},
 	accessData: {
 		clientID: "c03a0521a7b54bf29e501101b4b69007",
-		clientSecret: "bpjGN3KqGWmbibk4Fn74CDsFP2YQOdqo",
+		clientSecret: "lm3pa2z9T20qdylmXdKdPj11VBhXhNSd",
 	},
 	appData: {
 		isLogged: false,

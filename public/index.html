@@ -5,11 +5,24 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/icon_192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta meta name="viewport" content="width=device-width, user-scalable=no" />
     <meta name="theme-color" content="rgb(15, 9, 27)" />
-    <title>WoW Armory</title>
+    <title>WoW Helper</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134810213-3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-134810213-3');
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').then(function() { console.log("Service worker registered"); });
+      }
+    </script>
   </body>
 </html>

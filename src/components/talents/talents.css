@@ -20,6 +20,7 @@
 	background: var(--middle_blue);
 	border: 2px solid var(--light);
 	height: 200px;
+	border-radius: 3px;
 }
 
 @media screen and (max-width: 990px) {

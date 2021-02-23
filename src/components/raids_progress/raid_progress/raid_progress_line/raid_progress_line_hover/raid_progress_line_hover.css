@@ -1,3 +1,9 @@
 .raid_progress_line_hover{
 	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.raid_progress_line_hover_boss_kills {
+	margin-left: 20px;
 }

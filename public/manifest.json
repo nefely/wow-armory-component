@@ -1,6 +1,6 @@
 {
-  "short_name": "WoW Armory",
-  "name": "WoW Armory",
+  "short_name": "WoW Helper",
+  "name": "WoW Helper",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://nefely.github.io/wow-armory.html",
+  "start_url": "https://wowhelper.info/",
   "display": "fullscreen",
-  "theme_color": "rgb(15, 9, 27)",
-  "background_color": "rgb(15, 9, 27)"
+  "theme_color": "rgb(15, 9, 24)",
+  "background_color": "rgb(15, 9, 24)"
 }

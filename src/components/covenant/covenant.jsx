@@ -22,13 +22,16 @@ export default class Covenant extends Component {
                     this.setState({ 
                         data: result.data
                     });
-                    for ( var i = 0 ; i < this.state.data.soulbinds.length ; i++) {
-                        if (this.state.data.soulbinds[i].is_active == true) {
-                            this.setState({ 
-                                active_medium_data: this.state.data.soulbinds[i] 
-                            });
+                    if (this.state.data.soulbinds !== undefined && this.state.data.soulbinds !== null) {
+                        for ( var i = 0 ; i < this.state.data.soulbinds.length ; i++) {
+                            if (this.state.data.soulbinds[i].is_active == true) {
+                                this.setState({ 
+                                    active_medium_data: this.state.data.soulbinds[i] 
+                                });
+                            }
                         }
                     }
+                    
                     var chosen_covenant = ""; 
                     switch (result.data.chosen_covenant.name) {
                         case "Kyrian":
@@ -58,28 +61,30 @@ export default class Covenant extends Component {
     render() {
     	try {
             return (
-                <div className="wrapper">
-                    <div className="covenant_title">
-                        <h2>
-                            <span>{this.state.data.chosen_covenant.name}</span>
-                            <div className="covenant_title_image" data-chosen-covenant={this.state.chosen_covenant}></div>
-                            <span>Rank {this.state.data.renown_level}</span>
-                        </h2>
-                        <p>Medium : {this.state.active_medium_data.soulbind.name}</p>
-                    </div>
-                    <div className="covenant_tab_container">
-                        {this.state.active_medium_data.traits.map((data,i) => {
-                            return (
-                                <Covenant_Tab data={data} key={i} number={i} activeTab={this.state.activeTab} triggerTab={ (newNumber) => this.setState({activeTab: newNumber}) }/>
-                            )
-                        })}
-                    </div>
-                    <div className="covenant_description_container">
-                        {this.state.active_medium_data.traits.map((data,i) => {
-                            return (
-                                <Covenant_Description data={data} key={i} number={i} activeTab={this.state.activeTab} />
-                            )
-                        })}
+                <div id="covenant">
+                    <div className="wrapper">
+                        <div className="covenant_title">
+                            <h2>
+                                <span>{this.state.data.chosen_covenant.name}</span>
+                                <div className="covenant_title_image" data-chosen-covenant={this.state.chosen_covenant}></div>
+                                <span>Rank {this.state.data.renown_level}</span>
+                            </h2>
+                            <p>Medium : {this.state.active_medium_data.soulbind.name}</p>
+                        </div>
+                        <div className="covenant_tab_container">
+                            {this.state.active_medium_data.traits.map((data,i) => {
+                                return (
+                                    <Covenant_Tab data={data} key={i} number={i} activeTab={this.state.activeTab} triggerTab={ (newNumber) => this.setState({activeTab: newNumber}) }/>
+                                )
+                            })}
+                        </div>
+                        <div className="covenant_description_container">
+                            {this.state.active_medium_data.traits.map((data,i) => {
+                                return (
+                                    <Covenant_Description data={data} key={i} number={i} activeTab={this.state.activeTab} />
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
             )

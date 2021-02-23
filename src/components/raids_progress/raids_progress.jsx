@@ -21,7 +21,7 @@ export default class Raids_Progress extends Component {
 			    .then(result => {
 			    	if (result.data.expansions !== null && result.data.expansions !== undefined && result.data.expansions[result.data.expansions.length-1].expansion.name == store.gameData.expansionsName) {
 						this.setState({ 
-							data: result.data.expansions[result.data.expansions.length-1].instances
+							data: result.data.expansions[result.data.expansions.length-1].instances.reverse()
 						});
 			    	}
 			    }

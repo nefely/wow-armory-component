@@ -46,11 +46,13 @@ export default class Myphic_Plus_Progress extends Component {
     		else {
     			var key_rank = "COMMON";
     		}	
+			const isTimed = this.props.data.is_completed_within_time ? <p className="timed">In Time</p> : <p className="not_timed">Not In Time</p>
 	        return (
 				<div className={"myphic_plus_progress " + key_rank}>
 					<div className="myphic_plus_progress_container">
 						<div className="myphic_plus_progress_overlay" style={{backgroundImage: "url("+this.state.dungeonImage+")"}}>
 							<h3>{this.props.data.keystone_level}</h3>
+							{isTimed}
 						</div>
 						<p className="myphic_plus_progress_title">{this.props.data.dungeon.name}</p>
 					</div>
