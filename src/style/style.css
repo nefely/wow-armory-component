@@ -309,8 +309,8 @@ body {
     background: var(--white);
     font-weight: var(--normal);
     width: 100vw;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
 }
 @media screen and (max-width: 1199px) {
     body {

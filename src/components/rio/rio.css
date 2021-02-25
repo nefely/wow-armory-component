@@ -1,9 +1,6 @@
 #rio {
     width: 100%;
-    position: fixed;
-    left: 0;
-    bottom: 0%;
-    z-index: 100;
+    padding-bottom: 20px;
 }
 #rio .wrapper {
     max-width: 410px;
@@ -11,7 +8,6 @@
     border-top-left-radius: 3px;
     background: var(--middle_blue);
     border: 2px solid var(--light);
-    border-bottom: 0;
 }
 .rio_title {
     text-align: center;
@@ -38,10 +34,7 @@
 }
 .rio_title img {
     max-width: 100%;
-    max-height: 30px;
-}
-#rio .wrapper:hover .rio_container{
-    height: auto;
+    max-height: 20px;
 }
 .rio_container {
     display: flex;
@@ -49,14 +42,23 @@
     align-items: center;
     flex-wrap: wrap;
     height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     overflow: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.rio_container.active {
+    height: 101px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 .rio_role_block {
     margin-left: 5px;
     margin-right: 5px;
     text-align: center;
     width:120px;
-    margin-bottom: 10px;
     padding: 10px 0;
     display: flex;
     justify-content: center;
@@ -99,5 +101,8 @@
         width: 40px;
         height: 40px;
         text-align: center;
+    }
+    .rio_container.active {
+        height: 89px;
     }
 }

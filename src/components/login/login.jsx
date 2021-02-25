@@ -50,8 +50,9 @@ export default class Login extends Component {
                 return(
                     <div id="login">
                         <div className="workspace_container">
-                            <div className="wrapper">
-                                <h2>Choose You Character</h2>
+                            <div className="login_form wrapper">
+                                <h2>All your stats. In one place</h2>
+                                <h4>Choose You Character</h4>
                                 <form className="form">
                                     <SelectSearch 
                                         options={options_region} 
@@ -71,10 +72,18 @@ export default class Login extends Component {
                                     />
                                     <input type="text" placeholder="Character"/>
                                     <button onClick={logIn}>Log In</button>
+
                                 </form>
                             </div>
-                            <div className="wrapper check">
-                                <button onClick={Demo}>Demo</button>
+                            <div className="footer wrapper">
+                                <div className="demo">
+                                    <button onClick={Demo}>Demo</button>
+                                </div>
+                                <div className="rules">
+                                    <a href="https://www.privacypolicygenerator.info/live.php?token=uQhPwN9HMfSrzboYHwEE1I3Zy4aM0gVf" target="__blank">Privacy Policy</a>
+                                    <a href="https://www.termsofusegenerator.net/live.php?token=BVq5RS7Gyeh7Eg7k2OtNusBYNf1wxGzB" target="__blank">Terms Of Use</a>
+                                    <a href="mailto:nefely123@gmail.com">Contact Us</a>
+                                </div>
                             </div>
                         </div>
                     </div>

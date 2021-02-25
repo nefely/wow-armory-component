@@ -57,7 +57,7 @@ export default class App extends Component {
                 <Raids_Progress />
               </div>
               <Rosters />
-              <Logout />  
+              <Logout /> 
             </div>
           );
         } catch (error) {

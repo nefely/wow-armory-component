@@ -10,7 +10,7 @@ export default class Rio extends Component {
 	constructor(props) {
 	    super(props);
 		this.state = {
-			error: false
+			isActive: true,
 		}
 	}
 
@@ -25,18 +25,24 @@ export default class Rio extends Component {
 		} catch (error) {}
   	}
 	render() {
+		var toggleRio = () => {
+			this.setState({
+				isActive: !this.state.isActive
+			})
+		}
+
     	try {
 			if (this.state.data.mythic_plus_scores !== undefined && this.state.data.mythic_plus_scores !== null) {
 				return (
 					<div id="rio">
                         <div className="wrapper">
                             <div className="rio_title">
-                                <img src={rio_logo} alt="" />
+                                <img src={rio_logo} alt="" onClick={toggleRio}/>
                                 <a href={this.state.data.profile_url} target="__blank">
                                     <i className="fas fa-globe"></i>
                                 </a>
                             </div>
-                            <div className="rio_container">
+                            <div className={ !this.state.isActive ? "rio_container" : "rio_container active" }>
                                 <div className="rio_role_block rio_role_block_tank" data-point={this.state.data.mythic_plus_scores.tank}>
                                     <div className="rio_role_block_icon" />
                                     <p className="rio_role_block_point">{this.state.data.mythic_plus_scores.tank}</p>

@@ -1,0 +1,22 @@
+#navigation {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-top: 2px solid var(--light);
+    z-index: 5;;
+}
+#navigation > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 40px;
+    background: var(--dark_blue);
+}
+#navigation ul li {
+   list-style-type: none;
+}
+#navigation ul li.is-current a {
+    color: var(--legendary);
+}

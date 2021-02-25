@@ -15,30 +15,48 @@
 #login .workspace_container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-#login .workspace_container .wrapper {
-	z-index: 3;
-	max-width: 500px;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 500px;
     width: calc(100% - 20px);
+    margin: 0 auto;
+    /* height: auto;
+    min-height: calc(var(--vh, 1vh) * 100); */
 }
-#login .workspace_container .wrapper.check {
-    position: absolute;
-    bottom: 10px;
+#login .workspace_container .wrapper.login_form {
+    padding-top: 84px;
+    flex: 1 0 auto;
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 3;
+}
+#login .login_form > * {
+    width: 100%;
+}
+#login .workspace_container .wrapper.footer {
+    flex-shrink: 0;
     z-index: 2;
-} 
-#login .workspace_container .wrapper h2 {
+}
+#login .login_form h2 {
     color: var(--white);
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
-#login .form > button , #login .workspace_container .wrapper.check > button {
-	width: 100%;
+#login .login_form h4 {
+    margin-bottom: 15px;
+    color: var(--light);
+    text-align: center;
+}
+#login .demo > button ,
+#login form > button {
+    width: 100%;
 	background: var(--corruption);
 	border: 2px solid var(--corruption);
 	height: 40px;
-	margin-bottom: 0px;
+	margin-bottom: 10px;
     color: var(--white);
     text-shadow: 1px 0 1px var(--black) , 0 1px 1px var(--black) , -1px 0 1px var(--black) , 0 -1px 1px var(--black) !important;
 }
@@ -71,6 +89,19 @@
     font-family: "Roboto", sans-serif !important;
     font-weight: var(--normal) !important;
 }
+#login .rules {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#login .rules a {
+    padding: 5px;
+}
+#login .rules a:hover {
+    color: var(--w);
+}
 
 /* pluggin */
 .select-search {
@@ -95,6 +126,9 @@
     right: 19px;
     width: 11px;
     height: 11px;
+}
+.select-search button {
+    border-radius: 0;
 }
 .select-search__input {
     display: block;
@@ -129,7 +163,7 @@
     list-style: none;
 }
 .select-search__row:not(:first-child) {
-    border-top: 2px solid #eee;
+    border-top: 2px solid var(--light);
 }
 .select-search__option {
     display: block;
@@ -161,7 +195,7 @@
 }
 .select-search__group-header {
     text-transform: uppercase;
-    background: #eee;
+    background: var(--light);
     padding: 8px 16px;
 }
 .select-search.is-disabled {
@@ -180,8 +214,8 @@
 }
 .select-search:not(.is-loading):not(.select-search--multiple) .select-search__value::after {
     transform: rotate(45deg);
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border-right: 2px solid var(--b);
+    border-bottom: 2px solid var(--b);
     pointer-events: none;
 }
 .select-search--multiple .select-search__input {
@@ -204,12 +238,18 @@
     left: 0;
     border-radius: 3px;
     overflow: auto;
-    max-height: 297px;
+    max-height: 190px;
 }
 .select-search--multiple .select-search__select {
     position: relative;
     overflow: auto;
-    max-height: 260px;
-    border-top: 2px solid #eee;
+    max-height: 160px;
+    border-top: 2px solid var(--light);
     border-radius: 0 0 3px 3px;
+}
+
+@media screen and (max-height: 500px) {
+    #login .workspace_container .wrapper.login_form {
+        padding-top: 20px;
+    }
 }
