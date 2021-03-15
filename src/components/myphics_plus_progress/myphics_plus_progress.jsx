@@ -27,11 +27,11 @@ export default class Myphics_Plus_Progress extends Component {
 						var myphicFirst = result.data.best_runs[i].dungeon.id;
 						for (var y = 0 ; y < result.data.best_runs.length ; y++ ) {
 							var myphicSecond = result.data.best_runs[y].dungeon.id;
-							if (myphicFirst == myphicSecond) {
+							if (myphicFirst === myphicSecond) {
 								if (result.data.best_runs[i].keystone_level > result.data.best_runs[y].keystone_level) {
 									result.data.best_runs[y] = result.data.best_runs[i];
-								} else if (result.data.best_runs[i].keystone_level == result.data.best_runs[y].keystone_level) { 
-									if (result.data.best_runs[i].is_completed_within_time == true) {
+								} else if (result.data.best_runs[i].keystone_level === result.data.best_runs[y].keystone_level) { 
+									if (result.data.best_runs[i].is_completed_within_time === true) {
 										result.data.best_runs[y] = result.data.best_runs[i];
 									} else {
 										result.data.best_runs[i] = result.data.best_runs[y];

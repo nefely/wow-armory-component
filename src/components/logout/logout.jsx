@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import store from '../../store/store.jsx';
 
 import {logOut} from "../../store/store.jsx";
 

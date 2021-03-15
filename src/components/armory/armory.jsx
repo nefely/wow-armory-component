@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import store from './../../store/store.jsx';
 
+import backgroundCharacterImg from "./../../img/login-preview.jpg";
+
 import "./armory.css";
 
 import Armory_Item from "./armory_item/armory_item.jsx";
@@ -37,7 +39,11 @@ export default class Armory extends Component {
 					}
 			    }
 		    )
-	    } catch (error) {}
+	    } catch (error) {
+			this.setState({ 
+				characterImg: backgroundCharacterImg,
+			});
+		}
   	}
 
     render() {

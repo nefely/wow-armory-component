@@ -24,7 +24,7 @@ export default class Covenant extends Component {
                     });
                     if (this.state.data.soulbinds !== undefined && this.state.data.soulbinds !== null) {
                         for ( var i = 0 ; i < this.state.data.soulbinds.length ; i++) {
-                            if (this.state.data.soulbinds[i].is_active == true) {
+                            if (this.state.data.soulbinds[i].is_active === true) {
                                 this.setState({ 
                                     active_medium_data: this.state.data.soulbinds[i] 
                                 });

@@ -4,8 +4,7 @@
 }
 #rio .wrapper {
     max-width: 410px;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
+    border-radius: 3px;
     background: var(--middle_blue);
     border: 2px solid var(--light);
 }
@@ -41,7 +40,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 0;
+    height: auto;
     margin-top: 0;
     margin-bottom: 0;
     overflow: hidden;
@@ -49,14 +48,8 @@
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
-.rio_container.active {
-    height: 101px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
 .rio_role_block {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 0 5px 10px 5px;
     text-align: center;
     width:120px;
     padding: 10px 0;

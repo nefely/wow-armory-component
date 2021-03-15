@@ -59,7 +59,7 @@ export default class Rosters extends Component {
     			isVisible: !this.state.isVisible,
     		})
     	}
-		const InputSearchButton = this.state.inputSearchValue == "" ? <i className="fas fa-search" /> : <i className="fas fa-times clean" onClick={this.handleInputSearchClean}/>
+		const InputSearchButton = this.state.inputSearchValue === "" ? <i className="fas fa-search" /> : <i className="fas fa-times clean" onClick={this.handleInputSearchClean}/>
     	try {
 	        return (
 				<div id="rosters" className={ this.state.isVisible ? "isVisible" : ""}>
@@ -75,7 +75,7 @@ export default class Rosters extends Component {
 							</div>
 						</div>
 						<div className="roster_search xs-fcc">
-							<input type="text" placeholder="Character Name" value={this.state.handleInputSearch} onChange={this.handleInputSearch} id="roster_input_search"/>
+							<input type="text" placeholder="Character Name" value={this.state.handleInputSearch} onChange={this.handleInputSearch} id="roster_input_search" autocomplete="off"/>
 							{InputSearchButton}
 						</div>
 						<ul className="rosters_list">

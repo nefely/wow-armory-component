@@ -15,7 +15,7 @@ export default class Raid_Progress_Line extends Component {
 	UNSAFE_componentWillMount() {
 		try {
 			this.setState({ 
-				data: this.props.data.modes.filter( item => item.difficulty.type == this.props.data_difficulty)
+				data: this.props.data.modes.filter( item => item.difficulty.type === this.props.data_difficulty)
 			});
 		} catch (error) {}
   	}

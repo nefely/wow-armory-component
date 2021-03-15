@@ -74,6 +74,7 @@
 .armory_items_container_weapon ul > li:first-child .armory_item_view .armory_item_view_info_addition {
 	justify-content: flex-start;
 	flex-direction: row-reverse;
+	align-items: flex-start;
 }
 .armory_items_container_right ul > li .armory_item_view > .armory_item_view_img,
 .armory_items_container_weapon ul > li:first-child .armory_item_view > .armory_item_view_img {

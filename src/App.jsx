@@ -11,6 +11,7 @@ import Talents from "./components/talents/talents.jsx";
 import Myphics_Plus_Progress from "./components/myphics_plus_progress/myphics_plus_progress.jsx";
 import Raids_Progress from "./components/raids_progress/raids_progress.jsx";
 import Logout from "./components/logout/logout.jsx";
+import Navigation from "./components/navigation/navigation.jsx";
 
 import {logOut} from "./store/store.jsx";
 
@@ -55,6 +56,7 @@ export default class App extends Component {
                 <Talents /> 
                 <Myphics_Plus_Progress />
                 <Raids_Progress />
+                
               </div>
               <Rosters />
               <Logout /> 
