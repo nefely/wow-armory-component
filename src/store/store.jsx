@@ -61,7 +61,7 @@ export const Demo = () => {
 	store.userData.nameSpaceStatic = "static-eu";
 	store.userData.nameSpaceDynamic = "dynamic-eu";
 	store.userData.realmSlug = "soulflayer";
-	store.userData.characterName = "анука";
+	store.userData.characterName = "нефелин";
 	store.appData.isLogged = true;
 	ReactDOM.unmountComponentAtNode(document.getElementById('root'));
 	ReactDOM.render(<App/>,document.getElementById('root'))

@@ -75,7 +75,7 @@ export default class Rosters extends Component {
 							</div>
 						</div>
 						<div className="roster_search xs-fcc">
-							<input type="text" placeholder="Character Name" value={this.state.handleInputSearch} onChange={this.handleInputSearch} id="roster_input_search" autocomplete="off"/>
+							<input type="text" placeholder="Character Name" value={this.state.handleInputSearch} onChange={this.handleInputSearch} id="roster_input_search" autoComplete="off"/>
 							{InputSearchButton}
 						</div>
 						<ul className="rosters_list">

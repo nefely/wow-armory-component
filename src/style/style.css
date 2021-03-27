@@ -1500,3 +1500,25 @@ i.fa,i.fab,i.fal,i.far,i.fas {
     font-size: 1.2em;
 }
 
+/* slider  */
+.slick-dots {
+	position: relative;
+	bottom: 0;
+	margin-top: 20px;
+}
+.slick-dots li {
+	width: 10px;
+	height: 10px;
+}
+.slick-dots li button {
+	background: var(--white);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+.slick-dots li button:before {
+	display: none;
+}
+.slick-dots li.slick-active button {
+	background: var(--gold);
+}

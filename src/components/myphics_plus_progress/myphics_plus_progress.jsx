@@ -61,7 +61,7 @@ export default class Myphics_Plus_Progress extends Component {
 		        slidesPerRow: 1,
 		        rows: 1,
 		        arrows: false,
-		        dots: false,
+		        dots: true,
 		        infinite: false,
 				swipeToSlide: true,
 				centerMode: false,
