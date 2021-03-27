@@ -120,9 +120,68 @@
 .stats_container > div.versatility{
 	color: var(--versality);
 }
+
+
+.stats_ratio {
+	margin-top: 8px;
+	color: var(--white);
+	position: relative;
+    width: 100%;
+    background: var(--middle_blue);
+    border: 2px solid var(--light);
+    padding: 20px;
+    border-radius: 3px;
+}
+.stats_ratio_title {
+	color: var(--w);
+	margin-bottom: 20px;
+}
+.stats_ratio_container > div {
+	height: 30px;
+	border-radius: 3px;
+    border: 2px solid var(--light);
+	background: var(--black);
+    overflow: hidden;
+    position: relative;
+}
+.stats_ratio_container > div:not(:last-child) {
+	margin-bottom: 10px;
+}
+.stats_ratio_container_progress {
+	width: 20%;
+	margin-top: -1px;
+    height: 28px;
+    background: var(--corruption);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stats_ratio_container > .crit > .stats_ratio_container_progress {
+    background: var(--crit);
+}
+.stats_ratio_container > .haste > .stats_ratio_container_progress {
+    background: var(--haste);
+}
+.stats_ratio_container > .mastery > .stats_ratio_container_progress {
+    background: var(--mastery);
+}
+.stats_ratio_container > .versatility > .stats_ratio_container_progress {
+    background: var(--versality);
+}
+.stats_ratio_container_percents {
+	position: absolute;
+    z-index: 1;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 @media screen and (max-width: 767px) {
 	.stats_container {
 		margin: 0 auto;
+	}
+	.stats_ratio {
+		margin-top: 10px;
 	}
 	.stats_container > div {
 		width: calc(50% - 6px);
@@ -144,20 +203,10 @@
 		order: 1;
 		text-align: right;
 	}
-	/* .stats_container > div.crit{
-		border-right: 2px solid var(--light);
-		border-bottom: 2px solid var(--light);
+	.stats_ratio {
+		padding: 10px;
 	}
-	.stats_container > div.haste{
-		border-left: 2px solid var(--light);
-		border-bottom: 2px solid var(--light);
+	.stats_ratio_title {
+		margin-bottom: 10px;
 	}
-	.stats_container > div.mastery{
-		border-right: 2px solid var(--light);
-		border-top: 2px solid var(--light);
-	}
-	.stats_container > div.versatility{
-		border-left: 2px solid var(--light);
-		border-top: 2px solid var(--light);
-	} */
 }

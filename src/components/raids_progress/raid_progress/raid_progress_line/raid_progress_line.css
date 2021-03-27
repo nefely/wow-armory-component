@@ -10,11 +10,11 @@
 	margin-bottom: 10px;
 }
 .raid_progress_line_title {
-	width: 70px;
+	width: 75px;
 	color: var(--gold);
 }
 .raid_progress_line_container {
-	width: calc(100% - 70px);
+	width: calc(100% - 75px);
 	background: var(--black);
 	height: 30px;
 	border-radius: 3px;
@@ -47,8 +47,8 @@
 	margin-top: 0;
 	padding: 0;
 	overflow-x: hidden;
-	width: calc(100% - 70px);
-	margin-left: 70px;
+	width: calc(100% - 75px);
+	margin-left: 75px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -66,6 +66,12 @@
 	border: 2px solid var(--light);
 }
 @media screen and (max-width: 767px) {
+	.raid_progress_line_title {
+		width: 65px;
+	}
+	.raid_progress_line_container {
+		width: calc(100% - 65px);
+	}
 	.raid_progress_line_hover_container {
 		width: 100%;
 		margin-left: 0;

@@ -24,6 +24,20 @@ export default class Stats extends Component {
 						versatility_rating: result.data.versatility,
 						versatility_value: result.data.versatility_damage_done_bonus.toFixed(2),
                     });
+					this.setState({
+						all_ratio_units: this.state.crit_rating + this.state.haste_rating + this.state.mastery_rating + this.state.versatility_rating,
+					})
+					this.setState({
+						crit_ratio_units: ((this.state.crit_rating / this.state.all_ratio_units) * 100).toFixed(2) + "%",
+						haste_ratio_units: ((this.state.haste_rating / this.state.all_ratio_units) * 100).toFixed(2) + "%",
+						mastery_ratio_units: ((this.state.mastery_rating / this.state.all_ratio_units) * 100).toFixed(2) + "%",
+						versatility_ratio_units: ((this.state.versatility_rating / this.state.all_ratio_units) * 100).toFixed(2) + "%",
+					})
+					console.log(this.state.all_ratio_units)
+					console.log(this.state.crit_ratio_units)
+					console.log(this.state.haste_ratio_units)
+					console.log(this.state.mastery_ratio_units)
+					console.log(this.state.versatility_ratio_units)
                 })
 		} catch (error) {}
   	}
@@ -67,6 +81,29 @@ export default class Stats extends Component {
 								<div>
 									<p>{this.state.versatility_value}%</p>
 									<p>{this.state.versatility_rating}</p>
+								</div>
+							</div>
+						</div>
+						<div className="stats_ratio">
+							<div className="stats_ratio_title">
+								<h4>Ratio</h4>
+							</div>
+							<div className="stats_ratio_container">
+								<div className="crit">
+									<div className="stats_ratio_container_progress" style={{width: this.state.crit_ratio_units}}></div>
+									<div className="stats_ratio_container_percents">Crit: {this.state.crit_ratio_units}</div>
+								</div>
+								<div className="haste">
+									<div className="stats_ratio_container_progress" style={{width: this.state.haste_ratio_units}}></div>
+									<div className="stats_ratio_container_percents">Haste: {this.state.haste_ratio_units}</div>
+								</div>
+								<div className="mastery">
+									<div className="stats_ratio_container_progress" style={{width: this.state.mastery_ratio_units}}></div>
+									<div className="stats_ratio_container_percents">Mastery: {this.state.mastery_ratio_units}</div>
+								</div>
+								<div className="versatility">
+									<div className="stats_ratio_container_progress" style={{width: this.state.versatility_ratio_units}}></div>
+									<div className="stats_ratio_container_percents">Versatility: {this.state.versatility_ratio_units}</div>
 								</div>
 							</div>
 						</div>
