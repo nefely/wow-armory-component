@@ -1,0 +1,31 @@
+#copylink {
+    position: absolute;
+	width: 40px;
+	height: 40px;
+    left: 60px;
+    top: 10px;
+	color: var(--white);
+    z-index: 999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+}
+#copylink button {
+	width: 40px;
+	height: 40px;
+	background: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 0;
+}
+#copylink button:active {
+    position: relative;
+	background: var(--green);
+    border: 2px solid var(--green);
+    -webkit-transition: all 0.05s ease-in-out;
+    -o-transition: all 0.05s ease-in-out;
+    transition: all 0.05s ease-in-out;
+}
+#copylink button i {
+	color: var(--white);
+}

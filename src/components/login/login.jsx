@@ -43,7 +43,7 @@ export default class Login extends Component {
             const options_realm = realmsArray;
             const options_region = [
                 {name: 'EU', value: 'EU'},
-                {name: 'KR', value: 'KR'},
+                // {name: 'KR', value: 'KR'},
                 {name: 'US', value: 'US'},
             ];
             try {

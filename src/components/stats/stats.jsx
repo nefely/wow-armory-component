@@ -33,11 +33,6 @@ export default class Stats extends Component {
 						mastery_ratio_units: ((this.state.mastery_rating / this.state.all_ratio_units) * 100).toFixed(2) + "%",
 						versatility_ratio_units: ((this.state.versatility_rating / this.state.all_ratio_units) * 100).toFixed(2) + "%",
 					})
-					console.log(this.state.all_ratio_units)
-					console.log(this.state.crit_ratio_units)
-					console.log(this.state.haste_ratio_units)
-					console.log(this.state.mastery_ratio_units)
-					console.log(this.state.versatility_ratio_units)
                 })
 		} catch (error) {}
   	}
