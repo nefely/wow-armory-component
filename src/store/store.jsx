@@ -30,7 +30,7 @@ export const newCharacterRender = (e) => {
 	ReactDOM.render(<App/>,document.getElementById('root'))
 }
 export const logOut = () => {
-	window.location.href = window.location.origin
+	// window.location.href = window.location.origin
 	store.userData.region="eu";
 	store.userData.nameSpace = "profile-eu";
 	store.userData.nameSpaceStatic = "static-eu";

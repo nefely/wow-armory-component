@@ -17,15 +17,30 @@
 	background: var(--gold);
     border: 2px solid var(--gold);
     padding: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
-#copylink button:active {
+#copylink button.active {
     position: relative;
 	background: var(--green);
     border: 2px solid var(--green);
-    -webkit-transition: all 0.05s ease-in-out;
-    -o-transition: all 0.05s ease-in-out;
-    transition: all 0.05s ease-in-out;
 }
 #copylink button i {
 	color: var(--white);
+}
+#copylink p {
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 50%;
+    color: var(--w);
+    transform: translate3d(0%, -50%, 0);
+    white-space: nowrap;
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+#copylink p.active {
+    opacity: 1;
 }
