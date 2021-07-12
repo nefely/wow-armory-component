@@ -9,6 +9,7 @@ export default class Armory_Item_Hover_Sockets extends Component {
     	try {
     		return (
 		    	<div className="armory_item_hover_sockets">
+					
 			    	{this.props.data.sockets.map((data, i) => (
 						<Armory_Item_Hover_Socket data={data} key={i} />
 					))}

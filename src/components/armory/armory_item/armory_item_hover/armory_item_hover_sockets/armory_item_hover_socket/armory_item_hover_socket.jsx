@@ -23,9 +23,10 @@ export default class Armory_Item_Hover_Socket extends Component {
   	}
 
     render() {
+
     	try {
-    		return (
-	    		<div className="armory_item_hover_socket">
+			return (
+	    		<div className={ this.props.data.socket_type.type == "DOMINATION" ? "armory_item_hover_socket armory_item_hover_socket_domination" : "armory_item_hover_socket"}>
 	    			<div>
 						<img src={this.state.img} alt=""/>
 					</div>
