@@ -39,9 +39,8 @@
 	border-radius: 5px;
 }
 
-
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
 	.armory_item_hover_socket > div {
 		margin-top: -2px;
 	}
-}
+} */
