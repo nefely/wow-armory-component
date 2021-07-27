@@ -4,7 +4,7 @@
 .armory_item_hover_socket {
 	display: flex;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-start;
 	font-size: 0.9em;
 	color: var(--white);
 }
@@ -37,4 +37,11 @@
 	width: 15px;
 	height: 15px;
 	border-radius: 5px;
+}
+
+
+@media screen and (max-width: 1200px) {
+	.armory_item_hover_socket > div {
+		margin-top: -2px;
+	}
 }

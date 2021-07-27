@@ -20,17 +20,17 @@ export default class Armory_Item_Hover_Socket extends Component {
 			    }
 		    )
 		} catch (error) {}
+
   	}
 
     render() {
-
     	try {
 			return (
 	    		<div className={ this.props.data.socket_type.type == "DOMINATION" ? "armory_item_hover_socket armory_item_hover_socket_domination" : "armory_item_hover_socket"}>
 	    			<div>
 						<img src={this.state.img} alt=""/>
 					</div>
-					<p>{this.props.data.display_string}</p>
+					<p>{this.props.data.display_string.replace('|CFF20ff20','').replace('|R','')}</p>
 	    		</div>
 	    	)
     	} catch (error) {
