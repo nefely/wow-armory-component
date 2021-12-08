@@ -13,7 +13,7 @@ export default class Login extends Component {
       this.state = {
         isLoaded: false,
         defaultRegion: "EU",
-        defaultRealm: "soulflayer",
+        defaultRealm: "tarren-mill",
       }
     }
 

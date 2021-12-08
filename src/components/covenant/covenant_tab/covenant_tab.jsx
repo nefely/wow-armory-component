@@ -74,7 +74,7 @@ export default class Covenant_Tab extends Component {
 	        return (
                 <div 
 				className={ this.props.number === this.props.activeTab ? "covenant_tab active" : "covenant_tab"} 
-				data-type={ this.state.socket_type !== undefined ? "covenant-conduit" : "covenant-skill"}
+				// data-type={ this.state.socket_type !== undefined ? "covenant-conduit" : "covenant-skill"}
 				onClick={ (newNumber) => this.props.triggerTab(this.props.number) }
 				>
                     <img src={this.state.img} alt="" />
