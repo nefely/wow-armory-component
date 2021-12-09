@@ -19,37 +19,19 @@ export default class Myphics_Plus_Progress extends Component {
 		try {
 			axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"/mythic-keystone-profile/season/"+store.gameData.seasonNumber+"?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
 			    .then(result => {
-					console.log(result)
-					// this.setState({ 
-					// data: result.data.best_runs.filter(item => item.is_completed_within_time === true) ,
-					// });
-					// фільт щоб забрати повторювані ключі які були в час і не в час а вибирати з більшим показником рівня
 					for (var i = 0 ; i < result.data.best_runs.length ; i++ ) {
-						var myphicFirst = result.data.best_runs[i].dungeon.id;
-						for (var y = 0 ; y < result.data.best_runs.length ; y++ ) {
-							var myphicSecond = result.data.best_runs[y].dungeon.id;
-							if (myphicFirst === myphicSecond) {
-								if (result.data.best_runs[i].keystone_level > result.data.best_runs[y].keystone_level) {
-									result.data.best_runs[y] = result.data.best_runs[i];
-								} else if (result.data.best_runs[i].keystone_level === result.data.best_runs[y].keystone_level) { 
-									if (result.data.best_runs[i].is_completed_within_time === true) {
-										result.data.best_runs[y] = result.data.best_runs[i];
-									} else {
-										result.data.best_runs[i] = result.data.best_runs[y];
-									}
-								// (result.data.best_runs[y].keystone_level > result.data.best_runs[i].keystone_level)
-								} else {
-									result.data.best_runs[i] = result.data.best_runs[y];
-								}
+					for (var y = 0 ; y < result.data.best_runs.length ; y++ ) {
+						if (result.data.best_runs[i].dungeon.id === result.data.best_runs[y].dungeon.id) {
+							if (result.data.best_runs[i].mythic_rating.rating > result.data.best_runs[y].mythic_rating.rating) {
+								result.data.best_runs[y] = result.data.best_runs[i]
+							} else {
+								result.data.best_runs[i] = result.data.best_runs[y]
 							}
 						}
 					}
-					var uniqueTopRun = Array.from(new Set(result.data.best_runs));
-					uniqueTopRun.sort(function(a, b){return a.dungeon.id-b.dungeon.id});
-					// відсіяти тайм волки (за них дають 0 рейтингу)
-					uniqueTopRun = uniqueTopRun.filter(item => item.mythic_rating.rating)
+					}
 					this.setState({ 
-						data: uniqueTopRun ,
+						data: Array.from(new Set(result.data.best_runs)).filter(run => run.mythic_rating.rating) ,
 					});
 				}
 		    );
