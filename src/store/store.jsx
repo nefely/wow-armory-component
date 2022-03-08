@@ -11,7 +11,7 @@ var store = {
 		characterName: "".toLowerCase(),
 	},
 	gameData: {
-		seasonNumber: 6,
+		seasonNumber: 7,
 		expansionsName: "Shadowlands",
 	},
 	accessData: {
