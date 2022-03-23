@@ -41,6 +41,9 @@ axios.post("https://us.battle.net/oauth/token?grant_type=client_credentials&clie
 				store.userData.region = getURLParameter(window.location.href, 'region').toLowerCase();
 				store.userData.realmSlug = getURLParameter(window.location.href, 'realmSlug').toLowerCase().replace(/ /g, '-').replace(/'/g, '');
 				store.userData.characterName = getURLParameter(window.location.href, 'characterName').toLowerCase();
+				store.userData.nameSpace = "profile-" + store.userData.region;
+				store.userData.nameSpaceStatic = "static-" + store.userData.region;
+				store.userData.nameSpaceDynamic = "dynamic-" + store.userData.region;
 				store.appData.isLogged = true;
 				window.history.pushState(null, '', '/');
 			} else {
