@@ -36,6 +36,10 @@ export default class Rio extends Component {
                                 </a>
                             </div>
                             <div className="rio_container">
+							<div className="rio_role_block rio_role_block_all" data-point={this.state.data.mythic_plus_scores.all}>
+                                    <div className="rio_role_block_icon" />
+                                    <p className="rio_role_block_point">{this.state.data.mythic_plus_scores.all}</p>
+                                </div>
                                 <div className="rio_role_block rio_role_block_tank" data-point={this.state.data.mythic_plus_scores.tank}>
                                     <div className="rio_role_block_icon" />
                                     <p className="rio_role_block_point">{this.state.data.mythic_plus_scores.tank}</p>
