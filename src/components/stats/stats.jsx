@@ -81,7 +81,7 @@ export default class Stats extends Component {
 						</div>
 						<div className="stats_ratio">
 							<div className="stats_ratio_title">
-								<h4>Ratio</h4>
+								<h4>Ratio to sum of all secondary stats</h4>
 							</div>
 							<div className="stats_ratio_container">
 								<div className="crit">

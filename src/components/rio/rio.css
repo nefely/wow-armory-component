@@ -36,10 +36,11 @@
     max-height: 20px;
 }
 .rio_container {
+    width: 100%;
+    padding: 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     height: auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -48,10 +49,15 @@
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+.rio_container > .rio_role_block:not(:last-child) {
+    margin-right: 5px;
+}
 .rio_role_block {
-    margin: 0 5px 10px 5px;
+    margin-bottom: 10px;
     text-align: center;
-    width: 90px;
+    width: 100%;
+    min-width: calc(25% - 5px);
+    max-width: 100%;
     padding: 10px 0;
     display: flex;
     justify-content: center;
@@ -90,15 +96,9 @@
     #rio .wrapper {
         max-width: calc(100% - 20px);
     }
-    .rio_role_block {
-        width:100px;
-    }
     .rio_role_block_icon {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         text-align: center;
-    }
-    .rio_container.active {
-        height: 89px;
     }
 }
