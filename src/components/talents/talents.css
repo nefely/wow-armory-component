@@ -7,25 +7,38 @@
 	margin-bottom: 20px;
 	text-align: center;
 }
+.talent_tabs > .talent_tab:not(:last-child) {
+	margin-bottom: 20px;
+}
+.talent_tab {
+	max-width: 500px;
+	margin: 0 auto;
+}
+.talent_tab h4 {
+	color: var(--w);
+}
+.talents_tab_title {
+	margin-bottom: 10px;
+}
 .talents_tab_container {
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-gap: 10px;
 }
 .talents_description_container {
 	position: relative;
 	width: 100%;
-	margin-top: 10px;
 	background: var(--middle_blue);
 	border: 2px solid var(--light);
 	height: 200px;
 	border-radius: 3px;
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 @media screen and (max-width: 990px) {
 	.talents_tab_container {
-		max-width: 340px;
-		margin: 0 auto;
+		grid-template-columns: repeat(8, 1fr);
 	}
 }

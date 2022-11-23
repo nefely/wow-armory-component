@@ -1,38 +1,21 @@
 .talents_tab_container > .talent_tab {
-    margin-right: 5px;
-    margin-left: 5px;
     cursor: pointer;
 }
 .talents_tab_container > .talent_tab > img {
-    width: 50px;
-    height: 50px;
     margin-bottom: -4px;
     border-radius: 3px;
     border: 2px solid var(--light);
+    max-width: 100%;
+    width: 100%;
+}
+.talents_tab_container > .talent_tab.passive > img {
+    border-radius: 50%;
 }
 .talents_tab_container > .talent_tab.active > img {
     border: 2px solid var(--gold);
 }
 @media screen and (max-width: 990px) {
-    .talents_tab_container > .talent_tab {
-        margin-right: 10px;
-        margin-left: 0;
-    }
-    .talents_tab_container > .talent_tab:last-child {
-        margin-right: 0;
-    }
     .talents_tab_container > .talent_tab > img {
-        width: 35px;
-        height: 35px;
-        margin-bottom: -4px;
-        border-radius: 3px;
-        border: 2px solid var(--light);
-    }
-}
-@media screen and (max-width: 370px) {
-    .talents_tab_container > .talent_tab > img {
-        width: 30px;
-        height: 30px;
         margin-bottom: -4px;
         border-radius: 3px;
         border: 2px solid var(--light);

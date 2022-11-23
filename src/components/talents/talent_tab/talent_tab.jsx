@@ -12,7 +12,7 @@ export default class Talent_Tab extends Component {
 
 	UNSAFE_componentWillMount() {
 		try {
-			axios.get("https://us.api.blizzard.com/data/wow/media/spell/"+this.props.data.spell_tooltip.spell.id+"?namespace=static-us&locale=en_US&access_token="+store.userData.accessToken+"")
+			axios.get("https://us.api.blizzard.com/data/wow/media/spell/"+this.props.data.tooltip.spell_tooltip.spell.id+"?namespace=static-us&locale=en_US&access_token="+store.userData.accessToken+"")
 			    .then(result => {
                     this.setState({ 
                         img: result.data.assets[0].value,
@@ -24,7 +24,7 @@ export default class Talent_Tab extends Component {
     render() {
     	try {
 	        return (
-                <div className={ this.props.number === this.props.activeTab ? "talent_tab active" : "talent_tab" } onClick={ (newNumber) => this.props.triggerTab(this.props.number) }>
+                <div className={ [this.props.number === this.props.activeTab ? " talent_tab active " : " talent_tab " , this.props.data.tooltip.spell_tooltip.cast_time === "Passive" ? " passive " : "  "] }  onClick={ (newNumber) => this.props.triggerTab(this.props.number) }>
                     <img src={this.state.img} alt="" />
                 </div>
 	        )

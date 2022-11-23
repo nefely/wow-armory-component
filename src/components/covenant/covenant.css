@@ -50,15 +50,16 @@
 }
 .covenant_tab_container {
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-gap: 10px;
+	max-width: 500px;
+	margin: 0 auto;
 }
 .covenant_description_container {
 	position: relative;
 	width: 100%;
-	margin-top: 5px;
+	margin-top: 20px;
 	background: var(--middle_blue);
 	border: 2px solid var(--light);
 	min-height: 200px;
@@ -66,8 +67,6 @@
 }
 @media screen and (max-width: 990px) {
 	.covenant_tab_container {
-		max-width: 270px;
-		margin: 0 auto;
-		width: 100%;
+		grid-template-columns: repeat(8, 1fr);
 	}
 }
