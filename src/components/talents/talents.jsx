@@ -19,19 +19,14 @@ export default class Talents extends Component {
 		try {
 			axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"/specializations?namespace="+store.userData.nameSpace+"&locale="+store.userData.locale+"&access_token="+store.userData.accessToken+"")
 			    .then(result => {
-					var allTalents =  result.data.specializations.filter(item => item.specialization.name === result.data.active_specialization.name)
+					var allTalents =  result.data.specializations.filter(item => item.specialization.name === result.data.active_specialization.name)[0].loadouts.filter((item => item.is_active === true))
 					var classTalents = [...allTalents[0].selected_class_talents]
 					var specTalents = [...allTalents[0].selected_spec_talents]
-
 					this.setState({
 						classTalents: classTalents,
 						specTalents: specTalents,
 						allTalents: [...classTalents , ...specTalents]
 					})
-
-					console.log(this.state.classTalents)
-					// console.log(this.state.specTalents)
-					// console.log(this.state.allTalents)
                 })
 		} catch (error) {}
 	}
