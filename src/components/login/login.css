@@ -10,7 +10,7 @@
 	background-size: cover;
 	background-position-x: center;
     z-index: 1;
-    opacity: 0.25;
+    opacity: 0.75;
 }
 #login .workspace_container {
     display: flex;

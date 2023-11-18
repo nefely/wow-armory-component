@@ -4,7 +4,7 @@ import store from './store/store.jsx';
 
 import Rosters from "./components/rosters/rosters.jsx";
 import Rio from "./components/rio/rio.jsx";
-import Covenant from "./components/covenant/covenant.jsx";
+// import Covenant from "./components/covenant/covenant.jsx";
 import Armory from "./components/armory/armory.jsx";
 import Stats from "./components/stats/stats.jsx";
 import Talents from "./components/talents/talents.jsx";
@@ -51,10 +51,10 @@ export default class App extends Component {
             <div className="app">
               <div className="workspace_container">
                 <Armory />
-                <Rio />
-                <Covenant />
-                <Stats /> 
+                {/* <Rio /> */}
                 <Talents /> 
+                {/* <Covenant /> */}
+                <Stats /> 
                 <Myphics_Plus_Progress />
                 <Raids_Progress />
                 

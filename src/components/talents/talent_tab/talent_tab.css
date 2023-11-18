@@ -1,23 +1,26 @@
 .talents_tab_container > .talent_tab {
     cursor: pointer;
+    background: #000;
+    width: 100%;
+    padding-top: calc(100% - 4px);
+    border-radius: 3px;
+    position: relative;
+    border: 2px solid var(--light);
+    overflow: hidden;
 }
 .talents_tab_container > .talent_tab > img {
-    margin-bottom: -4px;
-    border-radius: 3px;
-    border: 2px solid var(--light);
     max-width: 100%;
     width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
 }
-.talents_tab_container > .talent_tab.passive > img {
+.talents_tab_container > .talent_tab.passive {
     border-radius: 50%;
 }
-.talents_tab_container > .talent_tab.active > img {
+.talents_tab_container > .talent_tab.active {
     border: 2px solid var(--gold);
-}
-@media screen and (max-width: 990px) {
-    .talents_tab_container > .talent_tab > img {
-        margin-bottom: -4px;
-        border-radius: 3px;
-        border: 2px solid var(--light);
-    }
 }

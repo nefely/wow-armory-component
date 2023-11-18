@@ -19,10 +19,12 @@ export default class Raids_Progress extends Component {
 		try {
 			axios.get("https://"+store.userData.region+".api.blizzard.com/profile/wow/character/"+store.userData.realmSlug+"/"+store.userData.characterName+"/encounters/raids?namespace="+store.userData.nameSpace+"&locale="+store.userData.lacale+"&access_token="+store.userData.accessToken+"")
 			    .then(result => {
-			    	if (result.data.expansions !== null && result.data.expansions !== undefined && result.data.expansions[result.data.expansions.length-1].expansion.name === store.gameData.expansionsName) {
+                    console.log(result)
+			    	if (result.data.expansions !== null && result.data.expansions !== undefined && result.data.expansions[result.data.expansions.length-2].expansion.name === store.gameData.expansionsRaidName) {
 						this.setState({ 
-							data: result.data.expansions[result.data.expansions.length-1].instances.reverse()
+							data: result.data.expansions[result.data.expansions.length-2].instances.reverse()
 						});
+                        console.log(this.state.data)
 			    	}
 			    }
 		    );

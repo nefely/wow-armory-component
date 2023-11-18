@@ -11,8 +11,9 @@ var store = {
 		characterName: "".toLowerCase(),
 	},
 	gameData: {
-		seasonNumber: 8,
-		expansionsName: "Shadowlands",
+		seasonNumber: 11,
+		expansionsName: "Mythic+ Dungeons",
+		expansionsRaidName: "Dragonflight",
 	},
 	accessData: {
 		clientID: "c03a0521a7b54bf29e501101b4b69007",

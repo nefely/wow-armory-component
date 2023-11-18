@@ -15,11 +15,12 @@ export default class Rio extends Component {
 
 	UNSAFE_componentWillMount() {
 		try {
-			axios.get("https://raider.io/api/v1/characters/profile?region="+store.userData.region+"&realm="+store.userData.realmSlug+"&name="+store.userData.characterName.charAt(0).toUpperCase() + store.userData.characterName.slice(1)+"&fields=mythic_plus_scores")
+			axios.get("https://raider.io/api/v1/characters/profile?region="+store.userData.region+"&realm="+store.userData.realmSlug+"&name="+store.userData.characterName.charAt(0).toUpperCase() + store.userData.characterName.slice(1)+"&fields=mythic_plus_scores_by_season")
 				.then(result => {
 					this.setState({ 
 						data: result.data ,
                     });
+                    console.log(this.state.data)
 				})
 		} catch (error) {}
   	}
