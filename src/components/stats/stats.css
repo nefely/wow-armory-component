@@ -28,6 +28,60 @@
 	border-radius: 3px;
 	border: 2px solid var(--light);
 }
+.stats_container > div:nth-child(1), 
+.stats_container > div:nth-child(2) {
+    width: calc( (100% - 10px) / 2);
+    margin-bottom: 10px;
+}
+
+.stats_container > div.strength:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.1;
+	z-index: 1;
+	background: var(--strength);
+}
+.stats_container > div.intellect:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.1;
+	z-index: 1;
+	background: var(--intellect);
+}
+.stats_container > div.agility:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.1;
+	z-index: 1;
+	background: var(--agility);
+}
+.stats_container > div.stamina:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.1;
+	z-index: 1;
+	background: var(--stamina);
+}
 .stats_container > div.crit:after{
 	content: "";
 	display: block;
@@ -81,6 +135,7 @@
 	width: 100%;
 	position: relative;
 	z-index: 2;
+    text-transform: capitalize;
 }
 .stats_container > div > svg {
 	width: 60px;
@@ -88,25 +143,51 @@
 	position: relative;
 	z-index: 2;
 }
+.stats_container > div.strength > svg{
+	fill: var(--strength)
+}
+.stats_container > div.intellect > svg{
+	fill: var(--intellect)
+}
+.stats_container > div.agility > svg{
+	fill: var(--agility)
+}
+.stats_container > div.stamina > svg{
+	fill: var(--stamina)
+}
 .stats_container > div.crit > svg{
-	stroke: var(--crit)
+	fill: var(--crit)
 }
 .stats_container > div.haste > svg{
-	stroke: var(--haste)
+	fill: var(--haste)
 }
 .stats_container > div.mastery > svg{
-	stroke: var(--mastery)
+	fill: var(--mastery)
 }
 .stats_container > div.versatility > svg{
-	stroke: var(--versality)
+	fill: var(--versality)
 }
 .stats_container > div > div {
 	color: var(--white);
+    width: 55px;
 	position: relative;
 	z-index: 2;
 }
 .stats_container > div > div > p:first-child {
 	font-weight: bold;
+}
+
+.stats_container > div.strength {
+	color: var(--strength);
+}
+.stats_container > div.intellect {
+	color: var(--intellect);
+}
+.stats_container > div.agility {
+	color: var(--agility);
+}
+.stats_container > div.stamina {
+	color: var(--stamina);
 }
 .stats_container > div.crit{
 	color: var(--crit);
@@ -188,21 +269,10 @@
 		height: 120px;
 		margin-bottom: 10px;
 	}
-	.stats_container > div:nth-child(n+3) {
+	.stats_container > div:nth-child(n+5) {
 		margin-bottom: 0;
 	}
-	.stats_container > div:nth-child(odd) > svg {
-		margin-right: 5px;
-	}
-	.stats_container > div:nth-child(even) > svg {
-		order: 2;
-		margin-right: 0;
-		margin-left: 5px;
-	}
-	.stats_container > div:nth-child(even) > div {
-		order: 1;
-		text-align: right;
-	}
+	
 	.stats_ratio {
 		padding: 10px;
 	}

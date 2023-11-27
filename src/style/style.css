@@ -284,6 +284,10 @@ textarea {
     --gold: #f8b700;
     --yellow: #feef6d;
 
+    --strength: #f33232;
+    --intellect: #d26cd1;
+    --agility: #ffd955;
+    --stamina: #ff8b2d;
     --haste: #0ed59b;
     --crit: #e01c1c;
     --mastery: #9256ff;

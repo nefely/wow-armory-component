@@ -20,7 +20,6 @@ export default class Rio extends Component {
 					this.setState({ 
 						data: result.data ,
                     });
-                    console.log(this.state.data)
 				})
 		} catch (error) {}
   	}
