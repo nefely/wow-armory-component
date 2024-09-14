@@ -11,9 +11,9 @@ var store = {
 		characterName: "".toLowerCase(),
 	},
 	gameData: {
-		seasonNumber: 11,
+		seasonNumber: 13,
 		expansionsName: "Mythic+ Dungeons",
-		expansionsRaidName: "Dragonflight",
+		expansionsRaidName: "The War Within",
 	},
 	accessData: {
 		clientID: "c03a0521a7b54bf29e501101b4b69007",
@@ -63,7 +63,7 @@ export const Demo = () => {
 	store.userData.nameSpaceStatic = "static-eu";
 	store.userData.nameSpaceDynamic = "dynamic-eu";
 	store.userData.realmSlug = "tarren-mill";
-	store.userData.characterName = "nefely";
+	store.userData.characterName = "nefelypriest";
 	store.appData.isLogged = true;
 	ReactDOM.unmountComponentAtNode(document.getElementById('root'));
 	ReactDOM.render(<App/>,document.getElementById('root'))
