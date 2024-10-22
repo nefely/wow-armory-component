@@ -31,16 +31,16 @@ export default class Myphic_Plus_Progress extends Component {
 
     render() {
     	try {
-    		if ( (this.props.data.keystone_level > 9) ) {
+    		if ( (this.props.data.keystone_level >= 12) ) {
     			var key_rank = "LEGENDARY";
     		} 
-    		else if ( (this.props.data.keystone_level <= 9) && (this.props.data.keystone_level > 7) ) {
+    		else if ( (this.props.data.keystone_level <= 11) && (this.props.data.keystone_level >= 10) ) {
     			var key_rank = "EPIC";
     		}
-    		else if ( (this.props.data.keystone_level <= 7) && (this.props.data.keystone_level > 5) ) {
+    		else if ( (this.props.data.keystone_level <= 9) && (this.props.data.keystone_level >= 7) ) {
     			var key_rank = "RARE";
     		}
-    		else if ( (this.props.data.keystone_level <= 5) && (this.props.data.keystone_level > 3) ) {
+    		else if ( (this.props.data.keystone_level <= 6) && (this.props.data.keystone_level >= 4) ) {
     			var key_rank = "UNCOMMON";
     		}
     		else {
