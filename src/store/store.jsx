@@ -6,7 +6,7 @@ import Login from '../components/login/login.jsx';
 var store = {
 	userData: {
 		region: "eu",
-		locale: "en_GB",
+		locale: "eu_GB",
 		realmSlug: "".toLowerCase().replace(/ /g, '-').replace(/'/g, ''),
 		characterName: "".toLowerCase(),
 	},
@@ -17,7 +17,7 @@ var store = {
 	},
 	accessData: {
 		clientID: "c03a0521a7b54bf29e501101b4b69007",
-		clientSecret: "lm3pa2z9T20qdylmXdKdPj11VBhXhNSd",
+		clientSecret: "ltjO2npEqLHNSNDv2Yjr3zGkG7W047vV",
 	},
 	appData: {
 		isLogged: false,
